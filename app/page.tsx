@@ -1,19 +1,26 @@
 import { Button } from "@/components/ui/button"
+import { PlayListCardComponent } from "@/components/PlayListCardComponent"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <>
+      <section>
+        <span className="px-4 font-medium">Quick PlayList</span>
+        <div className="flex flex-row gap-4 overflow-x-scroll p-4">
+          <PlayListCardComponent />
+          <PlayListCardComponent />
+          <PlayListCardComponent />
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
+      </section>
+
+      <section>
+        <span className="px-4 font-medium">Quick Songs</span>
+        <div className="flex flex-row gap-4 overflow-x-scroll p-4">
+          <PlayListCardComponent />
+          <PlayListCardComponent />
+          <PlayListCardComponent />
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
