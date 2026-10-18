@@ -17,7 +17,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-3 grid-rows-2 gap-2">
+         <div className="grid w-full grid-cols-3 grid-rows-2 gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/06c1f1b9752dde1407d0bbb6e37f5bcc.jpg"
