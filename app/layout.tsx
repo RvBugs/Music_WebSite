@@ -1,5 +1,5 @@
 "use client"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Roboto } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -25,6 +25,12 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+})
+
 
 const NAV_ITEMS: { href: string; label: string; icon: LucideIcon }[] = [
   { href: "/", label: "Home", icon: House },
@@ -75,9 +81,11 @@ function ThemeToggle() {
   )
 }
 
+/* ---------- Small screens (< md) ---------- */
+
 function TopBar() {
   return (
-    <header className="sticky top-0 z-50 border-b bg-card pt-[env(safe-area-inset-top)]">
+    <header className="sticky top-0 z-50 border-b bg-card pt-[env(safe-area-inset-top)] md:hidden">
       <div className="mx-auto flex h-16 max-w-xl items-center justify-between gap-1 px-1">
         <Link
           href="/"
@@ -99,7 +107,7 @@ function BottomNav() {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed inset-x-0 bottom-0 z-50 border-t bg-card pb-[env(safe-area-inset-bottom)]"
+      className="fixed inset-x-0 bottom-0 z-50 border-t bg-card pb-[env(safe-area-inset-bottom)] md:hidden"
     >
       <ul className="mx-auto flex h-20 max-w-xl items-stretch">
         {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
@@ -153,6 +161,56 @@ function BottomNav() {
   )
 }
 
+/* ---------- md and up ---------- */
+
+function Sidebar() {
+  const pathname = usePathname()
+
+  return (
+    <aside className="fixed inset-y-0 left-0 z-50 hidden w-64 flex-col border-r bg-card md:flex">
+      <div className="flex h-16 items-center px-4">
+        <Link
+          href="/"
+          aria-label="Home"
+          className="flex size-12 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          <Image src="/icon.png" alt="logo" width={24} height={24} />
+        </Link>
+      </div>
+
+      <nav aria-label="Sidebar navigation" className="flex-1 px-3 py-2">
+        <ul className="flex flex-col gap-1">
+          {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+            const active = isActivePath(pathname, href)
+
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "flex h-14 items-center gap-3 rounded-full px-4 text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    active
+                      ? "bg-secondary font-semibold text-secondary-foreground"
+                      : "font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
+                  )}
+                >
+                  <Icon size={24} strokeWidth={active ? 2.5 : 2} />
+                  {label}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+
+      <div className="px-4 pt-2 pb-[max(1rem,env(safe-area-inset-bottom))]">
+        <ThemeToggle />
+      </div>
+    </aside>
+  )
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -162,17 +220,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        "antialiased",
-        fontMono.variable,
-        "font-sans",
-        geist.variable
-      )}
+      className={cn("antialiased", roboto.className)}
     >
       <body>
         <ThemeProvider>
           <TopBar />
-          <div className="pb-24">{children}</div>
+          <Sidebar />
+          <div className="pb-24 md:pb-0 md:pl-64">{children}</div>
           <BottomNav />
         </ThemeProvider>
       </body>

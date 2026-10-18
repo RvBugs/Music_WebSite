@@ -11,7 +11,7 @@ import {
 
 export function PlayListCardComponent() {
   return (
-    <Card className="relative mx-auto w-full max-w-52 min-w-52 gap-2 pt-0 pb-3">
+    <Card className="relative w-full max-w-52 min-w-52 md:min-w-80 md:max-w-80 gap-2 pt-0 pb-3">
       <img
         src="/cover.jpg"
         alt="Event cover"
@@ -23,11 +23,11 @@ export function PlayListCardComponent() {
           playlist for wedding on october 2026
         </CardDescription>
       </CardHeader>
-      <CardFooter className="px-3">
-        <Button size="sm" className="h-7 w-full text-xs">
-          View Event
-        </Button>
-      </CardFooter>
+      {/*<CardFooter className="px-3">*/}
+      {/*  <Button size="sm" className="h-7 w-full text-xs">*/}
+      {/*    View Event*/}
+      {/*  </Button>*/}
+      {/*</CardFooter>*/}
     </Card>
   )
 }
