@@ -48,7 +48,7 @@ export default function BasicAppLayout({
 }) {
   return (
     <section>
-      <TopBar />
+      {/*<TopBar />*/}
       {children}
     </section>
   )

@@ -1,15 +1,10 @@
 import QuickPickContainers from "@/components/QuickPickContainers"
+import ChordsComponent from "@/components/ChordsComponent"
 
 export default function Songs() {
   return (
     <div className="h-full w-full">
-      <div>
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-      </div>
+      <ChordsComponent />
     </div>
   )
 }
