@@ -4,17 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add basic structure">
-      <change afterPath="$PROJECT_DIR$/app/account/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/playlist/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/search/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/songs/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/QuickPickContainers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image.jpg" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/FavouritePlaylist.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PlayListContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/CreatePlaylistContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/02260e21640f1659aeea1360b28c5afa (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/02260e21640f1659aeea1360b28c5afa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/030ad49b2acdd4747498c35811bdeec6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/044532f1a427964c90ef86729d71399d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/06c1f1b9752dde1407d0bbb6e37f5bcc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/23b2801b194ba1e9c04af559ae02f358.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/3399fbedd1110747c27c5d87ca01f767.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/356a66f7e0b35a47d9ec398adbb870bc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/361e195c4c93df6cf8e1a1680aa91380.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/3837f6af066f34a5066c9c5c9d8480ee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/45a97c8cbdb4c5508adb2d62d2e9b119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/4f1619ad986a46166e0fced741f532ad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/59e4b33f8f6e7d2e3805ee75e8e6e0ae.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/728c0e9834e45c45d3b16ae0a1995f68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/94caf6136a3014cd173fca6ffd439c63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/a304d3e4e1b317552b1845690799fcde.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/a332e5556066d05292861c92c95180b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/b206258a9bec6654038de9c3c78e9892.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/b60d6844ebaea6e52d2e5282d0593f3a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/bd79c66980d3002923d1669c713852d6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/d438800ed749aa7c54d8ac5f1c031abe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/d982e575e51ab7885694a91e0eaf941f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/download (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/download (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/download (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Music/f294ed5d7cb9bd50de13acc309f3b860.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/playlist/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/QuickPickContainers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/QuickPickContainers.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37" />
+    <option name="cachedIndexableFilesCount" value="26" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -35,7 +59,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,12 +70,75 @@
     &quot;assignee&quot;: &quot;rajiWanigasingha&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
-    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RvBugs/Music_WebSite.git",
+    "accountId": "4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e"
   }
-}</component>
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000009723067" />
+      <entry key="S2" value="1.00612854910233" />
+      <entry key="S5" value="1.175072571235661" />
+      <entry key="S10" value="1.585701768998518" />
+      <entry key="S30" value="2.800642189555692" />
+      <entry key="S60" value="4.387958774562897" />
+      <entry key="M2" value="6.569584768893289" />
+      <entry key="M5" value="9.174797801735261" />
+      <entry key="M10" value="10.442606628408427" />
+      <entry key="M15" value="10.926934292983495" />
+      <entry key="M30" value="11.63870870341639" />
+      <entry key="H1" value="16.403163589700306" />
+      <entry key="H2" value="38.28115928196928" />
+      <entry key="H4" value="76.58936352189855" />
+      <entry key="D1" value="150.1246342763674" />
+      <entry key="W1" value="169.5096857382118" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.7176726919809252E-244" />
+      <entry key="MS500" value="1.7659893583299002E-49" />
+      <entry key="S2" value="6.482591783767994E-13" />
+      <entry key="S5" value="1.3417986852116337E-5" />
+      <entry key="S10" value="0.003989476627633288" />
+      <entry key="S30" value="0.2546241723221598" />
+      <entry key="S60" value="0.8346664959030047" />
+      <entry key="M2" value="1.5634606073527797" />
+      <entry key="M5" value="2.304852826475151" />
+      <entry key="M10" value="2.628283486781953" />
+      <entry key="M15" value="2.7469249486873486" />
+      <entry key="M30" value="2.9542410560209746" />
+      <entry key="H1" value="4.453053390700064" />
+      <entry key="H2" value="10.249443781070191" />
+      <entry key="H4" value="19.45026279563094" />
+      <entry key="D1" value="36.00875398806867" />
+      <entry key="W1" value="40.24206809805405" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.1961460244741877" />
+      <entry key="MS500" value="0.7219645977880661" />
+      <entry key="S2" value="0.9240592555615079" />
+      <entry key="S5" value="1.055720339157434" />
+      <entry key="S10" value="1.2986215144219293" />
+      <entry key="S30" value="2.5672126676022904" />
+      <entry key="S60" value="4.802473950148635" />
+      <entry key="M2" value="7.841377092246167" />
+      <entry key="M5" value="11.332829990029172" />
+      <entry key="M10" value="12.991022688054125" />
+      <entry key="M15" value="13.619035283185278" />
+      <entry key="M30" value="14.564182333610226" />
+      <entry key="H1" value="20.83772025497822" />
+      <entry key="H2" value="48.51419257561125" />
+      <entry key="H4" value="96.02601606302305" />
+      <entry key="D1" value="186.12954721018406" />
+      <entry key="W1" value="209.75114846480324" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -68,29 +155,40 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "playlist/vishwa",
     "javascript.preferred.runtime.type.id": "bun",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app/account",
+    "last_opened_file_path": "C:/Users/vishw/Documents/Music_WebSite/public",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "bun",
-    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/account" />
-      <recent name="$PROJECT_DIR$/app/songs" />
+      <recent name="C:\Users\vishw\Documents\Music_WebSite\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vishw\Documents\Music_WebSite\components" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
@@ -117,25 +215,11 @@
       <option name="presentableId" value="Default" />
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
-      <workItem from="1792254443396" duration="11837000" />
-      <workItem from="1792310327035" duration="7591000" />
+      <workItem from="1792254443396" duration="11294000" />
     </task>
-    <task id="LOCAL-00001" summary="add basic structure">
-      <option name="closed" value="true" />
-      <created>1792267674847</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1792267674847</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add basic structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic structure" />
   </component>
 </project>
