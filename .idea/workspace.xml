@@ -4,17 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add basic structure">
-      <change afterPath="$PROJECT_DIR$/app/account/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/playlist/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/search/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/songs/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/QuickPickContainers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image.jpg" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="front page and basic desing for mobile">
+      <change afterPath="$PROJECT_DIR$/public/02260e21640f1659aeea1360b28c5afa (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/02260e21640f1659aeea1360b28c5afa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/030ad49b2acdd4747498c35811bdeec6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/044532f1a427964c90ef86729d71399d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/06c1f1b9752dde1407d0bbb6e37f5bcc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/23b2801b194ba1e9c04af559ae02f358.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3399fbedd1110747c27c5d87ca01f767.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/356a66f7e0b35a47d9ec398adbb870bc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/361e195c4c93df6cf8e1a1680aa91380.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3837f6af066f34a5066c9c5c9d8480ee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/45a97c8cbdb4c5508adb2d62d2e9b119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/4f1619ad986a46166e0fced741f532ad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/59e4b33f8f6e7d2e3805ee75e8e6e0ae.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/728c0e9834e45c45d3b16ae0a1995f68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/94caf6136a3014cd173fca6ffd439c63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/a304d3e4e1b317552b1845690799fcde.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/a332e5556066d05292861c92c95180b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/b206258a9bec6654038de9c3c78e9892.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/b60d6844ebaea6e52d2e5282d0593f3a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bd79c66980d3002923d1669c713852d6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/d438800ed749aa7c54d8ac5f1c031abe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/d982e575e51ab7885694a91e0eaf941f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/download (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/download (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/download (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/f294ed5d7cb9bd50de13acc309f3b860.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +41,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37" />
+    <option name="cachedIndexableFilesCount" value="44" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -118,7 +137,7 @@
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
       <workItem from="1792254443396" duration="11837000" />
-      <workItem from="1792310327035" duration="7591000" />
+      <workItem from="1792310327035" duration="8816000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -128,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792267674847</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="front page and basic desing for mobile">
+      <option name="closed" value="true" />
+      <created>1792318244428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792318244428</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add basic structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic structure" />
+    <MESSAGE value="front page and basic desing for mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="front page and basic desing for mobile" />
   </component>
 </project>
