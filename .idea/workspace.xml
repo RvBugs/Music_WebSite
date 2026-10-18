@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="">
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="search layout and structure">
+      <change afterPath="$PROJECT_DIR$/components/CreatePlaylistContainerBottom.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CreatePlaylistContainerTop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/playlist/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/PlayListContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PlayListContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/CreatePlaylistContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/CreatePlaylistContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/CreatePlaylistContainer.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="26" />
+    <option name="cachedIndexableFilesCount" value="77" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -28,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="chords/rajinda" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +45,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
-    &quot;accountId&quot;: &quot;4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e&quot;
+    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -52,60 +55,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000000010907" />
-      <entry key="S2" value="1.0028995752169507" />
-      <entry key="S5" value="1.1457154565064602" />
-      <entry key="S10" value="1.5420249936499082" />
-      <entry key="S30" value="2.6238656190157488" />
-      <entry key="S60" value="4.059911976614689" />
-      <entry key="M2" value="7.233021154524704" />
-      <entry key="M5" value="16.28291245176598" />
-      <entry key="M10" value="25.111446688482598" />
-      <entry key="M15" value="29.68743442084532" />
-      <entry key="M30" value="35.66353992377481" />
-      <entry key="H1" value="43.098281643080895" />
-      <entry key="H2" value="65.59399623435478" />
-      <entry key="H4" value="104.40604570728684" />
-      <entry key="D1" value="180.16137068751192" />
-      <entry key="W1" value="200.35568426905166" />
+      <entry key="MS500" value="1.0000000000002243" />
+      <entry key="S2" value="1.0007105150527906" />
+      <entry key="S5" value="1.0691006410132355" />
+      <entry key="S10" value="1.3969564052764873" />
+      <entry key="S30" value="3.052654795545769" />
+      <entry key="S60" value="5.184634640332322" />
+      <entry key="M2" value="9.297769621999366" />
+      <entry key="M5" value="19.706733633667543" />
+      <entry key="M10" value="30.910059303469726" />
+      <entry key="M15" value="38.53016313106113" />
+      <entry key="M30" value="51.963839076480866" />
+      <entry key="H1" value="63.166624883912355" />
+      <entry key="H2" value="70.68814700161293" />
+      <entry key="H4" value="75.090086643055" />
+      <entry key="D1" value="79.14347905249937" />
+      <entry key="W1" value="79.87666341138426" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.6587890939257774E-26" />
-      <entry key="MS500" value="6.981652588866637E-6" />
-      <entry key="S2" value="0.05140312929452902" />
-      <entry key="S5" value="0.3050676106930744" />
-      <entry key="S10" value="0.5529094006899387" />
-      <entry key="S30" value="0.9528748344626656" />
-      <entry key="S60" value="1.4841475780362974" />
-      <entry key="M2" value="2.383985950410194" />
-      <entry key="M5" value="4.201649122216258" />
-      <entry key="M10" value="5.800495575888439" />
-      <entry key="M15" value="6.6194014447662655" />
-      <entry key="M30" value="7.7244041038920725" />
-      <entry key="H1" value="9.60892592416229" />
-      <entry key="H2" value="15.425017735629256" />
-      <entry key="H4" value="24.71664453332178" />
-      <entry key="D1" value="41.78899005305418" />
-      <entry key="W1" value="46.207089787538344" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.388481617463126E-103" />
+      <entry key="S5" value="8.938173103065419E-42" />
+      <entry key="S10" value="2.9896790198207953E-21" />
+      <entry key="S30" value="1.4516841395162683E-7" />
+      <entry key="S60" value="4.1778436720776787E-4" />
+      <entry key="M2" value="0.02757866962519205" />
+      <entry key="M5" value="0.4510696273210907" />
+      <entry key="M10" value="1.3920079969984367" />
+      <entry key="M15" value="2.1868985833345334" />
+      <entry key="M30" value="3.704053522720881" />
+      <entry key="H1" value="5.011804346871617" />
+      <entry key="H2" value="5.89817962186121" />
+      <entry key="H4" value="6.418589433871524" />
+      <entry key="D1" value="6.898516479443003" />
+      <entry key="W1" value="6.985385320218689" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.11825720584069947" />
-      <entry key="MS500" value="0.6524775955631394" />
-      <entry key="S2" value="0.9197533704349521" />
-      <entry key="S5" value="1.2949218881864113" />
-      <entry key="S10" value="1.9482571083016869" />
-      <entry key="S30" value="3.4619501969621482" />
-      <entry key="S60" value="5.41405808297409" />
-      <entry key="M2" value="9.465703387739973" />
-      <entry key="M5" value="20.332036501132194" />
-      <entry key="M10" value="30.791310983211577" />
-      <entry key="M15" value="36.211043385235435" />
-      <entry key="M30" value="43.32983568021811" />
-      <entry key="H1" value="52.67177701831557" />
-      <entry key="H2" value="80.99372626135765" />
-      <entry key="H4" value="129.10447470578515" />
-      <entry key="D1" value="221.94568535789537" />
-      <entry key="W1" value="246.56204654051575" />
+      <entry key="MS100" value="0.01745761153237844" />
+      <entry key="MS500" value="0.44503786662629363" />
+      <entry key="S2" value="0.8172419126942218" />
+      <entry key="S5" value="0.9793504147146432" />
+      <entry key="S10" value="1.3060093719139128" />
+      <entry key="S30" value="2.874909213806172" />
+      <entry key="S60" value="4.990319139093926" />
+      <entry key="M2" value="9.13557676207248" />
+      <entry key="M5" value="19.985429234923682" />
+      <entry key="M10" value="32.16180546143602" />
+      <entry key="M15" value="40.598551876732614" />
+      <entry key="M30" value="55.58615847140408" />
+      <entry key="H1" value="68.12803836688815" />
+      <entry key="H2" value="76.55790928651531" />
+      <entry key="H4" value="81.49352122102997" />
+      <entry key="D1" value="86.03932421033836" />
+      <entry key="W1" value="86.86166335022406" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -116,48 +119,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;playlist/vishwa&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vishw/Documents/Music_WebSite/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "playlist/vishwa",
+    "javascript.preferred.runtime.type.id": "bun",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "bun",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
-        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vishw\Documents\Music_WebSite\public" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/app/account" />
+      <recent name="$PROJECT_DIR$/app/songs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vishw\Documents\Music_WebSite\components" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/(basicLayout)" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
@@ -184,11 +188,52 @@
       <option name="presentableId" value="Default" />
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
-      <workItem from="1792254443396" duration="11294000" />
+      <workItem from="1792254443396" duration="11837000" />
+      <workItem from="1792310327035" duration="19059000" />
     </task>
+    <task id="LOCAL-00001" summary="add basic structure">
+      <option name="closed" value="true" />
+      <created>1792267674847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792267674847</updated>
+    </task>
+    <task id="LOCAL-00002" summary="front page and basic desing for mobile">
+      <option name="closed" value="true" />
+      <created>1792318244428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792318244428</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add images">
+      <option name="closed" value="true" />
+      <created>1792321782851</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1792321782851</updated>
+    </task>
+    <task id="LOCAL-00004" summary="search layout and structure">
+      <option name="closed" value="true" />
+      <created>1792330570635</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1792330570635</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add basic structure" />
+    <MESSAGE value="front page and basic desing for mobile" />
+    <MESSAGE value="add images" />
+    <MESSAGE value="search layout and structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="search layout and structure" />
   </component>
 </project>
