@@ -1,16 +1,17 @@
 import { Plus } from "lucide-react"
-import QuickPickContainers from "@/components/QuickPickContainers"
+import Playlist from "@/components/PlayListContainer"
+import FavouritePlayList from "@/components/FavouritePlaylist"
+import CreatePlaylistContainerBottom from "@/components/CreateNewButtonBottom"
+import CreateNewButtonTop from "@/components/CreateNewButtonTop"
 
-export default function Playlist() {
+
+export default function Elements() {
   return (
-    <div className="h-full w-full">
-      <div>
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-        <QuickPickContainers />
-      </div>
+    <div >
+      <Playlist />
+      <FavouritePlayList />
+      <CreatePlaylistContainerBottom containerType={"Playlist"} />
     </div>
   )
 }
+

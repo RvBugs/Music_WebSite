@@ -1,4 +1,4 @@
-import { PlayListCardComponent } from "@/components/PlayListCardComponent"
+import { CardComponent } from "@/components/CardComponent"
 import { Button } from "@/components/ui/button"
 import QuickPickContainers from "@/components/QuickPickContainers"
 
@@ -61,12 +61,12 @@ export default function Page() {
         <section className="flex flex-col gap-4">
           <span className="font-medium">Favourite PlayList</span>
           <div className="flex scrollbar-none flex-row gap-4 overflow-x-scroll">
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"} />
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
           </div>
         </section>
 

@@ -9,7 +9,12 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export function PlayListCardComponent() {
+type CardComponentProps = {
+  title: string;
+  description: string;
+}
+
+export function CardComponent({title, description}: CardComponentProps) {
   return (
     <Card className="relative w-full max-w-52 min-w-52 md:min-w-80 md:max-w-80 gap-2 pt-0 pb-3">
       <img
@@ -18,9 +23,9 @@ export function PlayListCardComponent() {
         className="relative z-20 aspect-video w-full object-cover"
       />
       <CardHeader className="gap-0.5 px-3">
-        <CardTitle className="text-sm">Wedding PlayList</CardTitle>
+        <CardTitle className="text-sm">{title}</CardTitle>
         <CardDescription className="text-xs">
-          playlist for wedding on october 2026
+          {description}
         </CardDescription>
       </CardHeader>
       {/*<CardFooter className="px-3">*/}
