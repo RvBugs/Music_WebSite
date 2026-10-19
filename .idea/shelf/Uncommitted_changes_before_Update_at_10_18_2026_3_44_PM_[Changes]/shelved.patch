@@ -1,0 +1,183 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/components/PlayListCardComponent.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/public/cover.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/layout.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/layout.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/page.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/page.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"EmbeddingIndexingInfo\">\r\n    <option name=\"cachedIndexableFilesCount\" value=\"26\" />\r\n    <option name=\"fileBasedEmbeddingIndicesEnabled\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"TypeScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;rajiWanigasingha&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,\r\n    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3KoEZclHwx6ovRG4k2HB3GF6HbT\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"javascript.preferred.runtime.type.id\": \"bun\",\r\n    \"js.debugger.nextJs.config.created.client\": \"true\",\r\n    \"js.debugger.nextJs.config.created.server\": \"true\",\r\n    \"junie.onboarding.icon.badge.shown\": \"true\",\r\n    \"last_opened_file_path\": \"/home/rajindawanigasingha/dev/music-website\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"bun\",\r\n    \"prettierjs.PrettierConfiguration.Package\": \"/home/rajindawanigasingha/dev/music-website/node_modules/prettier\",\r\n    \"to.speed.mode.migration.done\": \"true\",\r\n    \"ts.external.directory.path\": \"/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/public\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"npm.Next.js: server-side\">\r\n    <configuration name=\"Next.js: debug client-side\" type=\"JavascriptDebugType\" uri=\"http://localhost:3000/\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Next.js: server-side\" type=\"js.build_tools.npm\">\r\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"dev\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"\" />\r\n      <created>1792215577761</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1792215577761</updated>\r\n      <workItem from=\"1792215581239\" duration=\"1141000\" />\r\n      <workItem from=\"1792254443396\" duration=\"11294000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3863300e8a6419b6cbd4cd87c3e2c469660bd913)
++++ b/.idea/workspace.xml	(date 1792318332023)
+@@ -5,10 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/public/cover.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -17,7 +14,6 @@
+   </component>
+   <component name="EmbeddingIndexingInfo">
+     <option name="cachedIndexableFilesCount" value="26" />
+-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -46,6 +42,69 @@
+     &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;
+   }
+ }</component>
++  <component name="McpProjectServerCommands">
++    <commands />
++    <urls />
++  </component>
++  <component name="NextEditCompletionFeaturesState">
++    <decayedCancelled>
++      <entry key="MS100" value="1.0" />
++      <entry key="MS500" value="1.0000000486938507" />
++      <entry key="S2" value="1.0466300757779716" />
++      <entry key="S5" value="1.7656430099893474" />
++      <entry key="S10" value="2.954384530059485" />
++      <entry key="S30" value="4.654882920160121" />
++      <entry key="S60" value="5.274722455196174" />
++      <entry key="M2" value="5.623123595536469" />
++      <entry key="M5" value="5.845687169427911" />
++      <entry key="M10" value="5.922237335585061" />
++      <entry key="M15" value="5.948022557017876" />
++      <entry key="M30" value="5.9739432074294925" />
++      <entry key="H1" value="5.986954541224265" />
++      <entry key="H2" value="5.9934729993865465" />
++      <entry key="H4" value="5.9967354311857" />
++      <entry key="D1" value="5.999455756734237" />
++      <entry key="W1" value="5.9999222473254195" />
++    </decayedCancelled>
++    <decayedSelected>
++      <entry key="MS100" value="0.0" />
++      <entry key="MS500" value="0.0" />
++      <entry key="S2" value="0.0" />
++      <entry key="S5" value="0.0" />
++      <entry key="S10" value="0.0" />
++      <entry key="S30" value="0.0" />
++      <entry key="S60" value="0.0" />
++      <entry key="M2" value="0.0" />
++      <entry key="M5" value="0.0" />
++      <entry key="M10" value="0.0" />
++      <entry key="M15" value="0.0" />
++      <entry key="M30" value="0.0" />
++      <entry key="H1" value="0.0" />
++      <entry key="H2" value="0.0" />
++      <entry key="H4" value="0.0" />
++      <entry key="D1" value="0.0" />
++      <entry key="W1" value="0.0" />
++    </decayedSelected>
++    <decayedShown>
++      <entry key="MS100" value="0.26425451014034507" />
++      <entry key="MS500" value="0.7663100274511961" />
++      <entry key="S2" value="0.9817841459842765" />
++      <entry key="S5" value="1.735990173338557" />
++      <entry key="S10" value="2.9367020602008607" />
++      <entry key="S30" value="4.647615597663773" />
++      <entry key="S60" value="5.270836638566586" />
++      <entry key="M2" value="5.621109623589195" />
++      <entry key="M5" value="5.844863393921983" />
++      <entry key="M10" value="5.921822317732233" />
++      <entry key="M15" value="5.947745175366077" />
++      <entry key="M30" value="5.97380416316857" />
++      <entry key="H1" value="5.986884930378428" />
++      <entry key="H2" value="5.993438171740066" />
++      <entry key="H4" value="5.996718011800969" />
++      <entry key="D1" value="5.999452852730543" />
++      <entry key="W1" value="5.999921832448814" />
++    </decayedShown>
++  </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 7
+ }</component>
+@@ -54,31 +113,35 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+-    "git-widget-placeholder": "master",
+-    "javascript.preferred.runtime.type.id": "bun",
+-    "js.debugger.nextJs.config.created.client": "true",
+-    "js.debugger.nextJs.config.created.server": "true",
+-    "junie.onboarding.icon.badge.shown": "true",
+-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "bun",
+-    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
+-    "to.speed.mode.migration.done": "true",
+-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
++    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
++    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
++    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
++    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/rajindawanigasingha/dev/music-website&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
++    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/public" />
+@@ -99,6 +162,13 @@
+       <method v="2" />
+     </configuration>
+   </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
++      </set>
++    </attachedChunks>
++  </component>
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+       <changelist id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="" />
+@@ -108,6 +178,8 @@
+       <updated>1792215577761</updated>
+       <workItem from="1792215581239" duration="1141000" />
+       <workItem from="1792254443396" duration="11294000" />
++      <workItem from="1792301002491" duration="1148000" />
++      <workItem from="1792302162821" duration="928000" />
+     </task>
+     <servers />
+   </component>
