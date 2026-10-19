@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="search layout and structure">
-      <change afterPath="$PROJECT_DIR$/components/ChordsComponent.tsx" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add chords">
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/editor/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AddSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(basicLayout)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/songs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(basicLayout)/songs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/account/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(basicLayout)/songs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/search/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ChordsComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChordsComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +75,7 @@
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/components",
+    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,11 +89,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/(mobile)" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/app/account" />
       <recent name="$PROJECT_DIR$/app/songs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(mobile)" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/(basicLayout)" />
       <recent name="$PROJECT_DIR$/public" />
@@ -115,7 +126,8 @@
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
       <workItem from="1792254443396" duration="11837000" />
-      <workItem from="1792310327035" duration="19059000" />
+      <workItem from="1792310327035" duration="20689000" />
+      <workItem from="1792380444434" duration="16129000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -149,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792330570635</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add chords">
+      <option name="closed" value="true" />
+      <created>1792343636387</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1792343636387</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +180,7 @@
     <MESSAGE value="front page and basic desing for mobile" />
     <MESSAGE value="add images" />
     <MESSAGE value="search layout and structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="search layout and structure" />
+    <MESSAGE value="add chords" />
+    <option name="LAST_COMMIT_MESSAGE" value="add chords" />
   </component>
 </project>
