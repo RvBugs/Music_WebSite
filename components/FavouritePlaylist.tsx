@@ -1,4 +1,4 @@
-import { PlayListCardComponent } from "@/components/PlayListCardComponent"
+import { CardComponent } from "@/components/CardComponent"
 
 export default function FavouritePlayList() {
   return (
@@ -8,12 +8,30 @@ export default function FavouritePlayList() {
           <br />
           <span className="font-medium">Favourite PlayList</span>
           <div className="flex scrollbar-none flex-row gap-3 overflow-x-scroll hover:scrollbar-thin hover:scrollbar-thumb-gray-400 hover:scrollbar-track-transparent">
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
-            <PlayListCardComponent />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
+            <CardComponent
+              title={"Playlist"}
+              description={"2026 playlist songs"}
+            />
           </div>
         </section>
       </div>
