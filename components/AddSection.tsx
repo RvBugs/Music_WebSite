@@ -85,6 +85,8 @@ export default function AddSection({
               </Button>
               <Button variant="default" className="w-2/3" onClick={() => {
                 setNewSection({ name, description })
+                setName("")
+                setDescription("")
                 onOpenChange(false)
               }}>
                 <Plus className="mr-2 size-4" />

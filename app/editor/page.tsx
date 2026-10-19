@@ -14,6 +14,11 @@ import {
 import { Button } from "@/components/ui/button"
 import AddSection from "@/components/AddSection"
 import { cn } from "@/lib/utils"
+import { Soundfont } from "smplr"
+import EditorSidebar from "@/app/editor/sidebar"
+import EmptySectionWorkspace from "@/app/editor/empty-section-workspace"
+import TopBarEditor from "@/app/editor/top-bar-editor"
+import BottomWavePlayer from "@/app/editor/bottom-wave-player"
 
 interface Chord {
   id: string
@@ -60,7 +65,6 @@ function parseLine(line: string, repeat = false) {
       key={i}
       className={cn(
         "h-14 border-l border-border/60 px-2 text-center align-middle text-xl font-semibold",
-        // double bar on the outer edges of a repeated row
         repeat && i === 0 && "border-l-4 border-double border-l-foreground",
         repeat &&
           i === SLOTS - 1 &&
@@ -309,95 +313,78 @@ export default function EditorPage() {
     )
 
   return (
-    <div className="flex h-full w-full flex-row">
-      <aside className="flex h-screen w-1/5 flex-col gap-4 bg-muted/5">
-        <div className="flex flex-row items-center justify-start gap-2 px-4 py-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/beekeeper-studio.png"
-            alt="icon"
-            className="h-12 w-12"
-          />
-          <div>
-            <p className="text-sm">Music Studio</p>
-            <p className="text-xs text-muted-foreground">
-              Build your notations and chords
-            </p>
-          </div>
-        </div>
-        <div>
-          <div className="flex flex-row items-center justify-start gap-2 px-4">
-            <p className="text-xs font-light text-muted-foreground">Overview</p>
-          </div>
-          <div className="px-4">
-            <div className="flex flex-row items-center gap-2 py-4">
-              <Disc size={16} />
-              <p className="text-sm">Chords Editor</p>
-            </div>
-          </div>
-        </div>
-      </aside>
+    <div className="flex h-dvh w-full flex-col overflow-hidden">
+      {/* Editor takes the available viewport height */}
+      <div className="flex min-h-0 flex-1 flex-col gap-3 bg-muted/15">
+        <TopBarEditor />
 
-      <div className="flex h-screen w-4/5 flex-col gap-3 bg-muted/15 py-4">
-        <div className="flex-1 space-y-6 overflow-y-auto px-4">
-          {sections.length === 0 && (
-            <p className="py-16 text-center text-sm text-muted-foreground">
-              No sections yet. Use the + button below to add one.
-            </p>
-          )}
+        {/* Only the sections scroll */}
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          <div className="flex min-h-full w-full flex-col px-4">
+            {sections.length === 0 ? (
+              <EmptySectionWorkspace />
+            ) : (
+              <div className="flex flex-col gap-8">
+                {sections.map((s) => (
+                  <section key={s.id} className="space-y-2">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-pressed={s.id === activeId}
+                      onClick={() => setActiveId(s.id)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") setActiveId(s.id)
+                      }}
+                      className={cn(
+                        "flex cursor-pointer flex-row items-center gap-2 rounded-lg border px-2 py-2 transition-colors hover:bg-muted/40",
+                        s.id === activeId && "bg-muted/50 ring-1 ring-border"
+                      )}
+                    >
+                      <div className="w-fit rounded-md bg-muted/50 p-2">
+                        <AudioLines size={28} />
+                      </div>
 
-          {sections.map((s) => (
-            <section key={s.id} className="space-y-2">
-              <div
-                role="button"
-                tabIndex={0}
-                aria-pressed={s.id === activeId}
-                onClick={() => setActiveId(s.id)}
-                onKeyDown={(e) => e.key === "Enter" && setActiveId(s.id)}
-                className={cn(
-                  "flex cursor-pointer flex-row items-center gap-2 rounded-lg px-2 py-2 transition-colors hover:bg-muted/40",
-                  s.id === activeId && "bg-muted/50 ring-1 ring-border"
-                )}
-              >
-                <div className="w-fit rounded-md bg-muted/50 p-2">
-                  <AudioLines size={28} />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm">{s.name}</p>
-                  <p className="truncate text-xs text-muted-foreground">
-                    {s.description}
-                  </p>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  aria-label="Delete section"
-                  className="size-8 text-red-600 hover:bg-red-500/10 hover:text-red-600 dark:text-red-400 dark:hover:text-red-400"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    removeSection(s.id)
-                  }}
-                >
-                  <Trash2 className="size-4" />
-                </Button>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-sm">{s.name}</p>
+                        <p className="truncate text-xs text-muted-foreground">
+                          {s.description}
+                        </p>
+                      </div>
+
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        aria-label="Delete section"
+                        className="size-8 text-red-600 hover:bg-red-500/10 hover:text-red-600 dark:text-red-400 dark:hover:text-red-400"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          removeSection(s.id)
+                        }}
+                      >
+                        <Trash2 className="size-4" />
+                      </Button>
+                    </div>
+
+                    <SectionTable
+                      chords={s.chords}
+                      onRemove={(lineId) => removeLine(s.id, lineId)}
+                      onToggleRepeat={(lineId) => toggleRepeat(s.id, lineId)}
+                      selectToEdit={(editId, editChord) => {
+                        setActiveId(s.id)
+                        setIsEditing(editId)
+                        setNewNote(editChord)
+                        setNewNoteError("")
+                      }}
+                    />
+                  </section>
+                ))}
               </div>
-
-              <SectionTable
-                chords={s.chords}
-                onRemove={(lineId) => removeLine(s.id, lineId)}
-                onToggleRepeat={(lineId) => toggleRepeat(s.id, lineId)}
-                selectToEdit={(editId, editChord) => {
-                  setActiveId(s.id)
-                  setIsEditing(editId)
-                  setNewNote(editChord)
-                  setNewNoteError("")
-                }}
-              />
-            </section>
-          ))}
+            )}
+          </div>
         </div>
 
-        <section className="sticky bottom-0 w-full px-4">
+        {/* Naturally stays at the bottom; no sticky positioning */}
+        <section className="shrink-0 px-4 pb-3">
           <div className="flex w-full flex-col gap-3 rounded-2xl border bg-card p-4">
             <textarea
               rows={1}
@@ -413,7 +400,7 @@ export default function EditorPage() {
               }}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault() // no newline in the box
+                  e.preventDefault()
                   addLine()
                 }
               }}
@@ -429,6 +416,7 @@ export default function EditorPage() {
                 >
                   <Plus />
                 </Button>
+
                 {newNoteError ? (
                   <p className="truncate text-xs text-destructive">
                     {newNoteError}
@@ -454,6 +442,11 @@ export default function EditorPage() {
           </div>
         </section>
       </div>
+
+      {/* Player remains within the viewport */}
+      {/*<div className="shrink-0">*/}
+      {/*  <BottomWavePlayer />*/}
+      {/*</div>*/}
 
       <AddSection
         open={openNewSection}
