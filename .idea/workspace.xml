@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="new playlist creation.">
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="basically editable chords editor">
+      <change afterPath="$PROJECT_DIR$/app/editor/bottom-wave-player.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/editor/empty-section-workspace.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/editor/sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/editor/top-bar-editor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/editor/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/editor/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AddSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AddSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -26,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chords/rajinda" />
+        <entry key="$PROJECT_DIR$" value="search/rajinda" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,72 +49,9 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
-    &quot;accountId&quot;: &quot;4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e&quot;
+    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;
   }
 }</component>
-  <component name="McpProjectServerCommands">
-    <commands />
-    <urls />
-  </component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="4.824869736858605E-21" />
-      <entry key="MS500" value="8.643648914883686E-5" />
-      <entry key="S2" value="0.09642158797383446" />
-      <entry key="S5" value="0.39234643594364527" />
-      <entry key="S10" value="0.6263757036766758" />
-      <entry key="S30" value="0.8710562493761776" />
-      <entry key="S60" value="1.302249522878647" />
-      <entry key="M2" value="3.170180146875356" />
-      <entry key="M5" value="9.768085057482542" />
-      <entry key="M10" value="20.4883014177929" />
-      <entry key="M15" value="29.718296558122237" />
-      <entry key="M30" value="48.32258295045582" />
-      <entry key="H1" value="71.93344724691572" />
-      <entry key="H2" value="103.3890004817605" />
-      <entry key="H4" value="134.40396150428754" />
-      <entry key="D1" value="176.1166421021202" />
-      <entry key="W1" value="185.38260732483104" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.000000003365471" />
-      <entry key="S30" value="1.0023501089240159" />
-      <entry key="S60" value="1.0729014308002789" />
-      <entry key="M2" value="1.4501598479406317" />
-      <entry key="M5" value="2.8813518889942378" />
-      <entry key="M10" value="5.671349111998154" />
-      <entry key="M15" value="8.171155593200702" />
-      <entry key="M30" value="13.00177324151809" />
-      <entry key="H1" value="17.909461726881965" />
-      <entry key="H2" value="22.907038089114447" />
-      <entry key="H4" value="27.215009584801262" />
-      <entry key="D1" value="32.628321229237656" />
-      <entry key="W1" value="33.7969498552929" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="0.010166733245640104" />
-      <entry key="MS500" value="0.39948750317421355" />
-      <entry key="S2" value="0.8835575882307376" />
-      <entry key="S5" value="1.291556963882453" />
-      <entry key="S10" value="1.5709788540605873" />
-      <entry key="S30" value="1.8531264881302163" />
-      <entry key="S60" value="2.361026728878861" />
-      <entry key="M2" value="4.603069646400282" />
-      <entry key="M5" value="12.627655274599046" />
-      <entry key="M10" value="26.136197893806337" />
-      <entry key="M15" value="37.86682226379942" />
-      <entry key="M30" value="61.30557184103681" />
-      <entry key="H1" value="89.82532781962455" />
-      <entry key="H2" value="126.27904977830396" />
-      <entry key="H4" value="161.60579717203794" />
-      <entry key="D1" value="208.74164520762113" />
-      <entry key="W1" value="219.17904652951339" />
-    </decayedShown>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -114,51 +60,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rajindawanigasingha/dev/music-website/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "chords/rajinda",
+    "javascript.preferred.runtime.type.id": "bun",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "bun",
+    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="ReactDesignerToolWindowState">
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
-        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
-      </map>
-    </option>
-  </component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/(mobile)" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/app/account" />
       <recent name="$PROJECT_DIR$/app/songs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vishw\Documents\Music_WebSite\components" />
+      <recent name="$PROJECT_DIR$/app/(mobile)" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/(basicLayout)" />
       <recent name="$PROJECT_DIR$/public" />
@@ -179,13 +115,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="" />
@@ -195,8 +124,8 @@
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
       <workItem from="1792254443396" duration="11837000" />
-      <workItem from="1792310327035" duration="19059000" />
-      <workItem from="1792385846625" duration="5399000" />
+      <workItem from="1792310327035" duration="20689000" />
+      <workItem from="1792380444434" duration="22899000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -230,15 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1792330570635</updated>
     </task>
-    <task id="LOCAL-00005" summary="new playlist creation.">
+    <task id="LOCAL-00005" summary="add chords">
       <option name="closed" value="true" />
-      <created>1792351280460</created>
+      <created>1792343636387</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1792351280460</updated>
+      <updated>1792343636387</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="basically editable chords editor">
+      <option name="closed" value="true" />
+      <created>1792405196755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1792405196755</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +186,8 @@
     <MESSAGE value="front page and basic desing for mobile" />
     <MESSAGE value="add images" />
     <MESSAGE value="search layout and structure" />
-    <MESSAGE value="new playlist creation." />
-    <option name="LAST_COMMIT_MESSAGE" value="new playlist creation." />
+    <MESSAGE value="add chords" />
+    <MESSAGE value="basically editable chords editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="basically editable chords editor" />
   </component>
 </project>
