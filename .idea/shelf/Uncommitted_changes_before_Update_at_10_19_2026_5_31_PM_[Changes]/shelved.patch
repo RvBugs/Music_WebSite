@@ -1,0 +1,66 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"add basic structure\">\r\n      <change afterPath=\"$PROJECT_DIR$/app/account/page.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/playlist/page.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/search/page.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/songs/page.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/components/QuickPickContainers.tsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/public/image.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/layout.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/layout.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/page.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/page.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/components/PlayListCardComponent.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/components/PlayListCardComponent.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"EmbeddingIndexingInfo\">\r\n    <option name=\"cachedIndexableFilesCount\" value=\"37\" />\r\n    <option name=\"fileBasedEmbeddingIndicesEnabled\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"TypeScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;rajiWanigasingha&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,\r\n    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3KoEZclHwx6ovRG4k2HB3GF6HbT\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"javascript.preferred.runtime.type.id\": \"bun\",\r\n    \"js.debugger.nextJs.config.created.client\": \"true\",\r\n    \"js.debugger.nextJs.config.created.server\": \"true\",\r\n    \"junie.onboarding.icon.badge.shown\": \"true\",\r\n    \"last_opened_file_path\": \"/home/rajindawanigasingha/dev/music-website/app/account\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"bun\",\r\n    \"prettierjs.PrettierConfiguration.Package\": \"/home/rajindawanigasingha/dev/music-website/node_modules/prettier\",\r\n    \"to.speed.mode.migration.done\": \"true\",\r\n    \"ts.external.directory.path\": \"/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/app/account\" />\r\n      <recent name=\"$PROJECT_DIR$/app/songs\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/public\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"npm.Next.js: server-side\">\r\n    <configuration name=\"Next.js: debug client-side\" type=\"JavascriptDebugType\" uri=\"http://localhost:3000/\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Next.js: server-side\" type=\"js.build_tools.npm\">\r\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"dev\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"\" />\r\n      <created>1792215577761</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1792215577761</updated>\r\n      <workItem from=\"1792215581239\" duration=\"1141000\" />\r\n      <workItem from=\"1792254443396\" duration=\"11837000\" />\r\n      <workItem from=\"1792310327035\" duration=\"7591000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add basic structure\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792267674847</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792267674847</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add basic structure\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add basic structure\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision db1f0fedb1443c1d47c65dbbbca4a019eb3a150e)
++++ b/.idea/workspace.xml	(date 1792411123714)
+@@ -60,31 +60,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+-    "git-widget-placeholder": "master",
+-    "javascript.preferred.runtime.type.id": "bun",
+-    "js.debugger.nextJs.config.created.client": "true",
+-    "js.debugger.nextJs.config.created.server": "true",
+-    "junie.onboarding.icon.badge.shown": "true",
+-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app/account",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "bun",
+-    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
+-    "to.speed.mode.migration.done": "true",
+-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
++    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
++    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
++    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/rajindawanigasingha/dev/music-website/app/account&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
++    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/rajindawanigasingha/dev/music-website/node_modules/prettier&quot;,
++    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/app/account" />
