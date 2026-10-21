@@ -1,8 +1,14 @@
 import { CardComponent } from "@/components/CardComponent"
 import { Button } from "@/components/ui/button"
 import QuickPickContainers from "@/components/QuickPickContainers"
+import { createClient } from "@/lib/supabase/server"
 
-export default function Page() {
+export default async function Page() {
+
+  const supabase = await createClient()
+
+  const data = await supabase.auth.getUser()
+
   return (
     <div className="flex flex-col gap-8 py-8">
       <div className="flex flex-col justify-start gap-4 px-4 lg:px-16">
@@ -11,9 +17,9 @@ export default function Page() {
           <img src="/cover.jpg" alt="cover" className="size-12 rounded-full" />
           <div className="flex flex-col">
             <span className="text-sm text-muted-foreground">
-              Rajinda Wanigasingha
+              {data.data.user?.email}
             </span>
-            <span className="text-lg font-medium">Quick Picks</span>
+            <span className="text-sm font-medium">Quick Picks</span>
           </div>
         </div>
 
