@@ -12,13 +12,9 @@ export default function EmptySectionWorkspace() {
         <h2 className="text-xl font-medium">Your music starts here</h2>
 
         <p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">
-          Click the button below to create your first section or use the +
+          To create your first section or use the +
           button in the text input to add a new section.
         </p>
-
-        <Button className="mt-4">
-          <span className="px-4 py-2">Create New Song</span>
-        </Button>
       </div>
     </div>
   )

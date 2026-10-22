@@ -2,6 +2,8 @@ import { CardComponent } from "@/components/CardComponent"
 import { Button } from "@/components/ui/button"
 import QuickPickContainers from "@/components/QuickPickContainers"
 import { createClient } from "@/lib/supabase/server"
+import logoutAction from "@/app/(mobile)/(basicLayout)/logout-action"
+import Logout from "@/app/(mobile)/(basicLayout)/logout"
 
 export default async function Page() {
 
@@ -22,6 +24,8 @@ export default async function Page() {
             <span className="text-sm font-medium">Quick Picks</span>
           </div>
         </div>
+
+        <Logout />
 
          <div className="grid w-full grid-cols-3 grid-rows-2 gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
