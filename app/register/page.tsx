@@ -7,9 +7,10 @@ import SetupBandCredential from "@/app/register/setup-band-credential"
 import { useBandSetupStore } from "./band-setup-store"
 import registerActions from "@/app/register/registerActions"
 import { toast } from "@/components/ui/toast"
-import { router } from "next/client"
+import { useRouter } from "next/navigation"
 
 export default function RegisterPage() {
+  const router = useRouter()
   const setupPage = useBandSetupStore((state) => state.setupPage)
   const setSetupPage = useBandSetupStore((state) => state.setSetupPage)
 
@@ -131,7 +132,7 @@ export default function RegisterPage() {
                           description: "Your band registered successfully",
                         })
 
-                        await router.replace("/login")
+                        router.push("/login")
                       }
                     } catch (e) {
                       toast.add({
