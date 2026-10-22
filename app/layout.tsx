@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toast"
 
 const roboto = Roboto({
   weight: "400",
@@ -23,9 +24,8 @@ export default function RootLayout({
       className={cn("antialiased", roboto.className)}
     >
       <body>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <Toaster />
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

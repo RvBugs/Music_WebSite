@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="basically editable chords editor">
-      <change afterPath="$PROJECT_DIR$/app/editor/bottom-wave-player.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/editor/empty-section-workspace.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/editor/sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/editor/top-bar-editor.tsx" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="setup page update">
+      <change afterPath="$PROJECT_DIR$/app/register/band-setup-store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/register/setup-band-credential.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/editor/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/editor/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/register/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/register/registerActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/register/registerActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/register/setup-band-cover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/register/setup-band-cover.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/register/setup-band.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/register/setup-band.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AddSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AddSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,21 +24,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="77" />
+    <option name="cachedIndexableFilesCount" value="154" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="search/rajinda" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +48,17 @@
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;rajiWanigasingha&quot;
   }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABJV3XmA&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1792417464185
+    }
+  ]
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -60,44 +74,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "chords/rajinda",
-    "javascript.preferred.runtime.type.id": "bun",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "bun",
-    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;supabase-intergration/rajinda&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rajindawanigasingha/dev/music-website/app/register&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/rajindawanigasingha/dev/music-website/node_modules/prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/register" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/(mobile)" />
-      <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/app/account" />
-      <recent name="$PROJECT_DIR$/app/songs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs" />
       <recent name="$PROJECT_DIR$/app/(mobile)" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/(basicLayout)" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -124,8 +139,11 @@
       <updated>1792215577761</updated>
       <workItem from="1792215581239" duration="1141000" />
       <workItem from="1792254443396" duration="11837000" />
-      <workItem from="1792310327035" duration="20689000" />
-      <workItem from="1792380444434" duration="22899000" />
+      <workItem from="1792310327035" duration="7591000" />
+      <workItem from="1792480674320" duration="5039000" />
+      <workItem from="1792552328109" duration="8543000" />
+      <workItem from="1792586429129" duration="13284000" />
+      <workItem from="1792638032798" duration="5863000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -135,47 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1792267674847</updated>
     </task>
-    <task id="LOCAL-00002" summary="front page and basic desing for mobile">
+    <task id="LOCAL-00002" summary="add supabase client and proxy and login and register">
       <option name="closed" value="true" />
-      <created>1792318244428</created>
+      <created>1792558266105</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1792318244428</updated>
+      <updated>1792558266105</updated>
     </task>
-    <task id="LOCAL-00003" summary="add images">
+    <task id="LOCAL-00003" summary="setup page update">
       <option name="closed" value="true" />
-      <created>1792321782851</created>
+      <created>1792610468604</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1792321782851</updated>
+      <updated>1792610468605</updated>
     </task>
-    <task id="LOCAL-00004" summary="search layout and structure">
-      <option name="closed" value="true" />
-      <created>1792330570635</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1792330570635</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add chords">
-      <option name="closed" value="true" />
-      <created>1792343636387</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1792343636387</updated>
-    </task>
-    <task id="LOCAL-00006" summary="basically editable chords editor">
-      <option name="closed" value="true" />
-      <created>1792405196755</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1792405196755</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,11 +177,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add basic structure" />
-    <MESSAGE value="front page and basic desing for mobile" />
-    <MESSAGE value="add images" />
-    <MESSAGE value="search layout and structure" />
-    <MESSAGE value="add chords" />
-    <MESSAGE value="basically editable chords editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="basically editable chords editor" />
+    <MESSAGE value="add supabase client and proxy and login and register" />
+    <MESSAGE value="setup page update" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup page update" />
   </component>
 </project>
