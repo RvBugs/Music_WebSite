@@ -1,0 +1,458 @@
+Index: app/page.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { CardComponent } from \"@/components/CardComponent\"\r\nimport { Button } from \"@/components/ui/button\"\r\nimport QuickPickContainers from \"@/components/QuickPickContainers\"\r\n\r\nexport default function Page() {\r\n  return (\r\n    <div className=\"flex flex-col gap-8 py-8\">\r\n\r\n      <div className=\"flex flex-col justify-start gap-4 px-4 lg:px-16\">\r\n        <div className=\"flex flex-row items-center gap-2\">\r\n          {/* eslint-disable-next-line @next/next/no-img-element */}\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"size-12 rounded-full\" />\r\n          <div className=\"flex flex-col\">\r\n            <span className=\"text-sm text-muted-foreground\">\r\n              Rajinda Wanigasingha\r\n            </span>\r\n            <span className=\"text-lg font-medium\">Quick Picks</span>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"grid w-full grid-cols-3 grid-rows-2 gap-2\">\r\n          {/* eslint-disable-next-line @next/next/no-img-element */}\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 rounded-md\" />\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 border-2 border-border rounded-md\" />\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 border-2 border-border rounded-md\" />\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 border-2 border-border rounded-md\" />\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 border-2 border-border rounded-md\" />\r\n          <img src=\"/cover.jpg\" alt=\"cover\" className=\"col-span-1 border-2 border-border rounded-md\" />\r\n        </div>\r\n      </div>\r\n\r\n      <div className=\"flex flex-col gap-8 px-4 lg:px-16\">\r\n\r\n        <section className=\"flex flex-col gap-4\">\r\n          <span className=\"font-medium\">Favourite PlayList</span>\r\n          <div className=\"flex scrollbar-none flex-row gap-4 overflow-x-scroll\">\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"} />\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"}/>\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"}/>\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"}/>\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"}/>\r\n            <CardComponent title={\"Playlist\"} description={\"2026 playlist songs\"}/>\r\n          </div>\r\n        </section>\r\n\r\n        <section className=\"flex flex-col gap-4\">\r\n          <span className=\"font-medium\">Favourite Songs</span>\r\n          <div className=\"flex scrollbar-none flex-row gap-4 overflow-x-scroll\">\r\n            <div className=\"min-w-80\">\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n            </div>\r\n            <div className=\"min-w-80\">\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n              <QuickPickContainers />\r\n            </div>\r\n          </div>\r\n        </section>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/page.tsx b/app/page.tsx
+--- a/app/page.tsx	(revision d2adbdca0cf3e4b57a327dc74ef73029845e550f)
++++ b/app/page.tsx	(date 1792413832729)
+@@ -1,19 +1,24 @@
+ import { CardComponent } from "@/components/CardComponent"
+ import { Button } from "@/components/ui/button"
+ import QuickPickContainers from "@/components/QuickPickContainers"
++import { LogOut } from "lucide-react"
+ 
+ export default function Page() {
+   return (
+     <div className="flex flex-col gap-8 py-8">
+-
+       <div className="flex flex-col justify-start gap-4 px-4 lg:px-16">
+         <div className="flex flex-row items-center gap-2">
+           {/* eslint-disable-next-line @next/next/no-img-element */}
+           <img src="/cover.jpg" alt="cover" className="size-12 rounded-full" />
+           <div className="flex flex-col">
+-            <span className="text-sm text-muted-foreground">
+-              Rajinda Wanigasingha
+-            </span>
++            <div className="flex flex-row items-center gap-200 between">
++              <span className="text-sm text-muted-foreground">
++                Rajinda Wanigasingha
++              </span>
++              <a href="/login">
++              <LogOut className="h-8 w-8 rounded-full" />
++                </a>
++            </div>
+             <span className="text-lg font-medium">Quick Picks</span>
+           </div>
+         </div>
+@@ -21,43 +26,120 @@
+         <div className="grid w-full grid-cols-3 grid-rows-2 gap-2">
+           {/* eslint-disable-next-line @next/next/no-img-element */}
+           <img src="/cover.jpg" alt="cover" className="col-span-1 rounded-md" />
+-          <img src="/cover.jpg" alt="cover" className="col-span-1 border-2 border-border rounded-md" />
+-          <img src="/cover.jpg" alt="cover" className="col-span-1 border-2 border-border rounded-md" />
+-          <img src="/cover.jpg" alt="cover" className="col-span-1 border-2 border-border rounded-md" />
+-          <img src="/cover.jpg" alt="cover" className="col-span-1 border-2 border-border rounded-md" />
+-          <img src="/cover.jpg" alt="cover" className="col-span-1 border-2 border-border rounded-md" />
++          <img
++            src="/cover.jpg"
++            alt="cover"
++            className="col-span-1 rounded-md border-2 border-border"
++          />
++          <img
++            src="/cover.jpg"
++            alt="cover"
++            className="col-span-1 rounded-md border-2 border-border"
++          />
++          <img
++            src="/cover.jpg"
++            alt="cover"
++            className="col-span-1 rounded-md border-2 border-border"
++          />
++          <img
++            src="/cover.jpg"
++            alt="cover"
++            className="col-span-1 rounded-md border-2 border-border"
++          />
++          <img
++            src="/cover.jpg"
++            alt="cover"
++            className="col-span-1 rounded-md border-2 border-border"
++          />
+         </div>
+       </div>
+ 
+       <div className="flex flex-col gap-8 px-4 lg:px-16">
+-
+         <section className="flex flex-col gap-4">
+           <span className="font-medium">Favourite PlayList</span>
+           <div className="flex scrollbar-none flex-row gap-4 overflow-x-scroll">
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"} />
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
+-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
++            <CardComponent
++              title={"Playlist"}
++              description={"2026 playlist songs"}
++            />
+           </div>
+         </section>
+ 
+         <section className="flex flex-col gap-4">
+           <span className="font-medium">Favourite Songs</span>
+           <div className="flex scrollbar-none flex-row gap-4 overflow-x-scroll">
+-            <div className="min-w-80">
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-            </div>
+-            <div className="min-w-80">
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-              <QuickPickContainers />
+-            </div>
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++          </div>
++          <div className={"flex min-w-80 shrink-0 grow flex-col"}>
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++          </div>
++          <div className={"flex min-w-80 shrink-0 grow flex-col"}>
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
++            <QuickPickContainers
++              propstype={"Playlist"}
++              details={"12 or more songs"}
++            />
+           </div>
+         </section>
+       </div>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"new playlist creation.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"EmbeddingIndexingInfo\">\r\n    <option name=\"cachedIndexableFilesCount\" value=\"77\" />\r\n    <option name=\"fileBasedEmbeddingIndicesEnabled\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"TypeScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"chords/rajinda\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;rajiWanigasingha&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/RvBugs/Music_WebSite.git\",\r\n    \"accountId\": \"4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e\"\r\n  }\r\n}]]></component>\r\n  <component name=\"McpProjectServerCommands\">\r\n    <commands />\r\n    <urls />\r\n  </component>\r\n  <component name=\"NextEditCompletionFeaturesState\">\r\n    <decayedCancelled>\r\n      <entry key=\"MS100\" value=\"4.824869736858605E-21\" />\r\n      <entry key=\"MS500\" value=\"8.643648914883686E-5\" />\r\n      <entry key=\"S2\" value=\"0.09642158797383446\" />\r\n      <entry key=\"S5\" value=\"0.39234643594364527\" />\r\n      <entry key=\"S10\" value=\"0.6263757036766758\" />\r\n      <entry key=\"S30\" value=\"0.8710562493761776\" />\r\n      <entry key=\"S60\" value=\"1.302249522878647\" />\r\n      <entry key=\"M2\" value=\"3.170180146875356\" />\r\n      <entry key=\"M5\" value=\"9.768085057482542\" />\r\n      <entry key=\"M10\" value=\"20.4883014177929\" />\r\n      <entry key=\"M15\" value=\"29.718296558122237\" />\r\n      <entry key=\"M30\" value=\"48.32258295045582\" />\r\n      <entry key=\"H1\" value=\"71.93344724691572\" />\r\n      <entry key=\"H2\" value=\"103.3890004817605\" />\r\n      <entry key=\"H4\" value=\"134.40396150428754\" />\r\n      <entry key=\"D1\" value=\"176.1166421021202\" />\r\n      <entry key=\"W1\" value=\"185.38260732483104\" />\r\n    </decayedCancelled>\r\n    <decayedSelected>\r\n      <entry key=\"MS100\" value=\"1.0\" />\r\n      <entry key=\"MS500\" value=\"1.0\" />\r\n      <entry key=\"S2\" value=\"1.0\" />\r\n      <entry key=\"S5\" value=\"1.0\" />\r\n      <entry key=\"S10\" value=\"1.000000003365471\" />\r\n      <entry key=\"S30\" value=\"1.0023501089240159\" />\r\n      <entry key=\"S60\" value=\"1.0729014308002789\" />\r\n      <entry key=\"M2\" value=\"1.4501598479406317\" />\r\n      <entry key=\"M5\" value=\"2.8813518889942378\" />\r\n      <entry key=\"M10\" value=\"5.671349111998154\" />\r\n      <entry key=\"M15\" value=\"8.171155593200702\" />\r\n      <entry key=\"M30\" value=\"13.00177324151809\" />\r\n      <entry key=\"H1\" value=\"17.909461726881965\" />\r\n      <entry key=\"H2\" value=\"22.907038089114447\" />\r\n      <entry key=\"H4\" value=\"27.215009584801262\" />\r\n      <entry key=\"D1\" value=\"32.628321229237656\" />\r\n      <entry key=\"W1\" value=\"33.7969498552929\" />\r\n    </decayedSelected>\r\n    <decayedShown>\r\n      <entry key=\"MS100\" value=\"0.010166733245640104\" />\r\n      <entry key=\"MS500\" value=\"0.39948750317421355\" />\r\n      <entry key=\"S2\" value=\"0.8835575882307376\" />\r\n      <entry key=\"S5\" value=\"1.291556963882453\" />\r\n      <entry key=\"S10\" value=\"1.5709788540605873\" />\r\n      <entry key=\"S30\" value=\"1.8531264881302163\" />\r\n      <entry key=\"S60\" value=\"2.361026728878861\" />\r\n      <entry key=\"M2\" value=\"4.603069646400282\" />\r\n      <entry key=\"M5\" value=\"12.627655274599046\" />\r\n      <entry key=\"M10\" value=\"26.136197893806337\" />\r\n      <entry key=\"M15\" value=\"37.86682226379942\" />\r\n      <entry key=\"M30\" value=\"61.30557184103681\" />\r\n      <entry key=\"H1\" value=\"89.82532781962455\" />\r\n      <entry key=\"H2\" value=\"126.27904977830396\" />\r\n      <entry key=\"H4\" value=\"161.60579717203794\" />\r\n      <entry key=\"D1\" value=\"208.74164520762113\" />\r\n      <entry key=\"W1\" value=\"219.17904652951339\" />\r\n    </decayedShown>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3KoEZclHwx6ovRG4k2HB3GF6HbT\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.MCP Project settings loaded\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"RunOnceActivity.typescript.service.memoryLimit.init\": \"true\",\r\n    \"codeWithMe.voiceChat.enabledByDefault\": \"false\",\r\n    \"com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1\": \"true\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"javascript.preferred.runtime.type.id\": \"bun\",\r\n    \"js.debugger.nextJs.config.created.client\": \"true\",\r\n    \"js.debugger.nextJs.config.created.server\": \"true\",\r\n    \"junie.onboarding.icon.badge.shown\": \"true\",\r\n    \"last_opened_file_path\": \"/home/rajindawanigasingha/dev/music-website/components\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.jshint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.jshint\": \"\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"bun\",\r\n    \"prettierjs.PrettierConfiguration.Package\": \"C:\\\\Users\\\\vishw\\\\Documents\\\\Music_WebSite\\\\node_modules\\\\prettier\",\r\n    \"to.speed.mode.migration.done\": \"true\",\r\n    \"ts.external.directory.path\": \"C:\\\\Program Files\\\\JetBrains\\\\WebStorm 2026.2.3\\\\plugins\\\\javascript-plugin\\\\jsLanguageServicesImpl\\\\external\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ReactDesignerToolWindowState\">\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.intellij.reactbuddy.reactComponents\" value=\"false\" />\r\n        <entry key=\"com.intellij.reactbuddy.reactInspector\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/components\" />\r\n      <recent name=\"$PROJECT_DIR$/app/account\" />\r\n      <recent name=\"$PROJECT_DIR$/app/songs\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\vishw\\Documents\\Music_WebSite\\components\" />\r\n      <recent name=\"$PROJECT_DIR$/app\" />\r\n      <recent name=\"$PROJECT_DIR$/app/(basicLayout)\" />\r\n      <recent name=\"$PROJECT_DIR$/public\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"npm.Next.js: server-side\">\r\n    <configuration name=\"Next.js: debug client-side\" type=\"JavascriptDebugType\" uri=\"http://localhost:3000/\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Next.js: server-side\" type=\"js.build_tools.npm\">\r\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"dev\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"629b4f83-3ba6-4a77-8199-d4f30bd1532c\" name=\"Changes\" comment=\"\" />\r\n      <created>1792215577761</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1792215577761</updated>\r\n      <workItem from=\"1792215581239\" duration=\"1141000\" />\r\n      <workItem from=\"1792254443396\" duration=\"11837000\" />\r\n      <workItem from=\"1792310327035\" duration=\"19059000\" />\r\n      <workItem from=\"1792385846625\" duration=\"5399000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add basic structure\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792267674847</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792267674847</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"front page and basic desing for mobile\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792318244428</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792318244428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"add images\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792321782851</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792321782851</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"search layout and structure\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792330570635</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792330570635</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"new playlist creation.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1792351280460</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1792351280460</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add basic structure\" />\r\n    <MESSAGE value=\"front page and basic desing for mobile\" />\r\n    <MESSAGE value=\"add images\" />\r\n    <MESSAGE value=\"search layout and structure\" />\r\n    <MESSAGE value=\"new playlist creation.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"new playlist creation.\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d2adbdca0cf3e4b57a327dc74ef73029845e550f)
++++ b/.idea/workspace.xml	(date 1792520167594)
+@@ -6,6 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="new playlist creation.">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -13,8 +14,7 @@
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="EmbeddingIndexingInfo">
+-    <option name="cachedIndexableFilesCount" value="77" />
+-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
++    <option name="cachedIndexableFilesCount" value="37" />
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -24,9 +24,10 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="chords/rajinda" />
++        <entry key="$PROJECT_DIR$" value="master" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -49,61 +50,61 @@
+   </component>
+   <component name="NextEditCompletionFeaturesState">
+     <decayedCancelled>
+-      <entry key="MS100" value="4.824869736858605E-21" />
+-      <entry key="MS500" value="8.643648914883686E-5" />
+-      <entry key="S2" value="0.09642158797383446" />
+-      <entry key="S5" value="0.39234643594364527" />
+-      <entry key="S10" value="0.6263757036766758" />
+-      <entry key="S30" value="0.8710562493761776" />
+-      <entry key="S60" value="1.302249522878647" />
+-      <entry key="M2" value="3.170180146875356" />
+-      <entry key="M5" value="9.768085057482542" />
+-      <entry key="M10" value="20.4883014177929" />
+-      <entry key="M15" value="29.718296558122237" />
+-      <entry key="M30" value="48.32258295045582" />
+-      <entry key="H1" value="71.93344724691572" />
+-      <entry key="H2" value="103.3890004817605" />
+-      <entry key="H4" value="134.40396150428754" />
+-      <entry key="D1" value="176.1166421021202" />
+-      <entry key="W1" value="185.38260732483104" />
++      <entry key="MS100" value="2.1775576246284435E-157" />
++      <entry key="MS500" value="4.651509703884034E-32" />
++      <entry key="S2" value="1.4686950963830102E-8" />
++      <entry key="S5" value="7.610386487171007E-4" />
++      <entry key="S10" value="0.03456529922066318" />
++      <entry key="S30" value="0.6944526051700765" />
++      <entry key="S60" value="2.012545747099531" />
++      <entry key="M2" value="4.759402452266909" />
++      <entry key="M5" value="9.929073940084464" />
++      <entry key="M10" value="13.561922610491912" />
++      <entry key="M15" value="15.599863834238628" />
++      <entry key="M30" value="19.0061104200813" />
++      <entry key="H1" value="21.80863062166535" />
++      <entry key="H2" value="23.68418687394848" />
++      <entry key="H4" value="24.779830246515555" />
++      <entry key="D1" value="25.787296765489774" />
++      <entry key="W1" value="25.96937540331341" />
+     </decayedCancelled>
+     <decayedSelected>
+       <entry key="MS100" value="1.0" />
+       <entry key="MS500" value="1.0" />
+       <entry key="S2" value="1.0" />
+-      <entry key="S5" value="1.0" />
+-      <entry key="S10" value="1.000000003365471" />
+-      <entry key="S30" value="1.0023501089240159" />
+-      <entry key="S60" value="1.0729014308002789" />
+-      <entry key="M2" value="1.4501598479406317" />
+-      <entry key="M5" value="2.8813518889942378" />
+-      <entry key="M10" value="5.671349111998154" />
+-      <entry key="M15" value="8.171155593200702" />
+-      <entry key="M30" value="13.00177324151809" />
+-      <entry key="H1" value="17.909461726881965" />
+-      <entry key="H2" value="22.907038089114447" />
+-      <entry key="H4" value="27.215009584801262" />
+-      <entry key="D1" value="32.628321229237656" />
+-      <entry key="W1" value="33.7969498552929" />
++      <entry key="S5" value="1.0000001541031833" />
++      <entry key="S10" value="1.0003925598434107" />
++      <entry key="S30" value="1.0737917036580273" />
++      <entry key="S60" value="1.31273948265655" />
++      <entry key="M2" value="1.940406427415957" />
++      <entry key="M5" value="3.5807332002094903" />
++      <entry key="M10" value="4.873155667723141" />
++      <entry key="M15" value="5.466493581144245" />
++      <entry key="M30" value="6.168300691762516" />
++      <entry key="H1" value="6.566412359826194" />
++      <entry key="H2" value="6.77856822426717" />
++      <entry key="H4" value="6.888098132093803" />
++      <entry key="D1" value="6.981182669665447" />
++      <entry key="W1" value="6.997307689354075" />
+     </decayedSelected>
+     <decayedShown>
+-      <entry key="MS100" value="0.010166733245640104" />
+-      <entry key="MS500" value="0.39948750317421355" />
+-      <entry key="S2" value="0.8835575882307376" />
+-      <entry key="S5" value="1.291556963882453" />
+-      <entry key="S10" value="1.5709788540605873" />
+-      <entry key="S30" value="1.8531264881302163" />
+-      <entry key="S60" value="2.361026728878861" />
+-      <entry key="M2" value="4.603069646400282" />
+-      <entry key="M5" value="12.627655274599046" />
+-      <entry key="M10" value="26.136197893806337" />
+-      <entry key="M15" value="37.86682226379942" />
+-      <entry key="M30" value="61.30557184103681" />
+-      <entry key="H1" value="89.82532781962455" />
+-      <entry key="H2" value="126.27904977830396" />
+-      <entry key="H4" value="161.60579717203794" />
+-      <entry key="D1" value="208.74164520762113" />
+-      <entry key="W1" value="219.17904652951339" />
++      <entry key="MS100" value="0.00968521640577333" />
++      <entry key="MS500" value="0.3955686505927249" />
++      <entry key="S2" value="0.7930589555960944" />
++      <entry key="S5" value="0.9121569378619372" />
++      <entry key="S10" value="0.9884564982411759" />
++      <entry key="S30" value="1.7335631674803764" />
++      <entry key="S60" value="3.2749616433955593" />
++      <entry key="M2" value="6.628681665179147" />
++      <entry key="M5" value="13.441608557337936" />
++      <entry key="M10" value="18.386902044929165" />
++      <entry key="M15" value="21.029746617293917" />
++      <entry key="M30" value="25.153116033186077" />
++      <entry key="H1" value="28.363403559749326" />
++      <entry key="H2" value="30.45664024652729" />
++      <entry key="H4" value="31.664789707798306" />
++      <entry key="D1" value="32.76794431531648" />
++      <entry key="W1" value="32.966606342775286" />
+     </decayedShown>
+   </component>
+   <component name="ProjectColorInfo">{
+@@ -116,30 +117,31 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "ModuleVcsDetector.initialDetectionPerformed": "true",
+     "RunOnceActivity.MCP Project settings loaded": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+     "RunOnceActivity.git.unshallow": "true",
+     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "codeWithMe.voiceChat.enabledByDefault": "false",
+     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+-    "ignore.virus.scanning.warn.message": "true",
++    "git-widget-placeholder": "master",
++    "git.auto.fetch.suggestion.counter": "1",
+     "javascript.preferred.runtime.type.id": "bun",
+     "js.debugger.nextJs.config.created.client": "true",
+     "js.debugger.nextJs.config.created.server": "true",
+     "junie.onboarding.icon.badge.shown": "true",
+-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/components",
++    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app/account",
+     "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.jshint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.jshint": "",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "bun",
+     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\prettier",
+     "to.speed.mode.migration.done": "true",
+-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
++    "ts.external.directory.path": "C:\\Users\\vishw\\Documents\\Music_WebSite\\node_modules\\typescript\\lib",
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+@@ -148,19 +150,16 @@
+       <map>
+         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
++        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+       </map>
+     </option>
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/components" />
+       <recent name="$PROJECT_DIR$/app/account" />
+       <recent name="$PROJECT_DIR$/app/songs" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\vishw\Documents\Music_WebSite\components" />
+-      <recent name="$PROJECT_DIR$/app" />
+-      <recent name="$PROJECT_DIR$/app/(basicLayout)" />
+       <recent name="$PROJECT_DIR$/public" />
+     </key>
+   </component>
+@@ -195,8 +194,9 @@
+       <updated>1792215577761</updated>
+       <workItem from="1792215581239" duration="1141000" />
+       <workItem from="1792254443396" duration="11837000" />
+-      <workItem from="1792310327035" duration="19059000" />
+-      <workItem from="1792385846625" duration="5399000" />
++      <workItem from="1792310327035" duration="7591000" />
++      <workItem from="1792480823685" duration="2502000" />
++      <workItem from="1792513559179" duration="1089000" />
+     </task>
+     <task id="LOCAL-00001" summary="add basic structure">
+       <option name="closed" value="true" />
+@@ -206,39 +206,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1792267674847</updated>
+     </task>
+-    <task id="LOCAL-00002" summary="front page and basic desing for mobile">
+-      <option name="closed" value="true" />
+-      <created>1792318244428</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1792318244428</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="add images">
+-      <option name="closed" value="true" />
+-      <created>1792321782851</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1792321782851</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="search layout and structure">
+-      <option name="closed" value="true" />
+-      <created>1792330570635</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1792330570635</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="new playlist creation.">
+-      <option name="closed" value="true" />
+-      <created>1792351280460</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1792351280460</updated>
+-    </task>
+-    <option name="localTasksCounter" value="6" />
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -246,10 +214,6 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="add basic structure" />
+-    <MESSAGE value="front page and basic desing for mobile" />
+-    <MESSAGE value="add images" />
+-    <MESSAGE value="search layout and structure" />
+-    <MESSAGE value="new playlist creation." />
+-    <option name="LAST_COMMIT_MESSAGE" value="new playlist creation." />
++    <option name="LAST_COMMIT_MESSAGE" value="add basic structure" />
+   </component>
+ </project>
+\ No newline at end of file
