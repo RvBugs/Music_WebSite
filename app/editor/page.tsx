@@ -19,6 +19,9 @@ import EditorSidebar from "@/app/editor/sidebar"
 import EmptySectionWorkspace from "@/app/editor/empty-section-workspace"
 import TopBarEditor from "@/app/editor/top-bar-editor"
 import BottomWavePlayer from "@/app/editor/bottom-wave-player"
+import { toast } from "@/components/ui/toast"
+import updateSongChords from "@/app/editor/updateSongChords"
+import { useRouter } from "next/navigation"
 
 interface Chord {
   id: string
@@ -207,6 +210,7 @@ export default function EditorPage({
 }: {
   searchParams: Promise<{ id: string; name: string; cover: string }>
 }) {
+  const router = useRouter()
   const [openNewSection, setOpenNewSection] = useState(false)
   const [newNote, setNewNote] = useState("")
   const [newNoteError, setNewNoteError] = useState("")
@@ -318,11 +322,46 @@ export default function EditorPage({
 
   const songData = use(searchParams)
 
+  const handleSaveChord = async (chord: string) => {
+    try {
+      const results = await updateSongChords(songData.id, chord)
+
+      if (results.type === "error") {
+        toast.add({
+          type: "error",
+          title: "Couldn't save chord",
+          description: results.error,
+        })
+
+        return
+      } else {
+        toast.add({
+          type: "success",
+          title: "Chord saved successfully",
+          description: "Your chord has been saved to the cloud.",
+        })
+      }
+
+      router.replace("/songs")
+    } catch (error) {
+      console.error("Error saving chord:", error)
+      toast.add({
+        type: "error",
+        title: "Error saving chord",
+        description: "Failed to save chord. Please try again.",
+      })
+    }
+  }
+
   return (
     <div className="flex h-dvh w-full flex-col overflow-hidden">
       {/* Editor takes the available viewport height */}
       <div className="flex min-h-0 flex-1 flex-col gap-3 bg-muted/15">
-        <TopBarEditor songName={songData.name} cover={songData.cover}/>
+        <TopBarEditor
+          songName={songData.name}
+          cover={songData.cover}
+          createSongsAction={() => handleSaveChord(JSON.stringify(sections))}
+        />
 
         {/* Only the sections scroll */}
         <div className="min-h-0 flex-1 overflow-y-auto">

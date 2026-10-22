@@ -12,6 +12,7 @@ export type RegisterResult = {
 
 export default async function createNewSong(name: string, timesig: string, scale: string ,cover: File) : Promise<RegisterResult> {
   const supabase = await createClient()
+  const user = await supabase.auth.getUser()
 
   const fileName = `public/songs/${cover.name}-${name}-${Date.now()}`
 
@@ -36,7 +37,7 @@ export default async function createNewSong(name: string, timesig: string, scale
 
   const { data, error } = await supabase
     .from("song")
-    .insert([{ name: name, timesig: timesig, scale: scale }])
+    .insert([{ name: name, timesig: timesig, scale: scale, band: user.data.user?.id }])
     .select("id ,name")
     .single()
 
