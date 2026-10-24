@@ -4,9 +4,11 @@ import { Song } from "@/app/(mobile)/(basicLayout)/songs/load"
 import { ChevronDown, MoreVertical, Rows3 } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function SongsCards({ songs }: {songs: Song[]}) {
 
+  const router = useRouter()
   const [card ,setCard] = useState<boolean>(false)
 
   return (
@@ -23,7 +25,7 @@ export default function SongsCards({ songs }: {songs: Song[]}) {
         {songs.map((song) => {
           if (!card) {
             return (
-              <div key={song.id} className="col-span-1">
+              <div key={song.id} className="col-span-1" onClick={() => router.push(`/songs/${song.id}`)}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={JSON.parse(song.cover as string).data.publicUrl}
@@ -42,7 +44,7 @@ export default function SongsCards({ songs }: {songs: Song[]}) {
             )
           } else {
             return (
-              <div key={song.id} className="col-span-full flex flex-row items-center justify-between">
+              <div key={song.id} className="col-span-full flex flex-row items-center justify-between" onClick={() => router.push(`/songs/${song.id}`)}>
                 <div className="flex flex-row gap-4 items-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img

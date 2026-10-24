@@ -1,6 +1,6 @@
 "use client"
 
-import { use, useState } from "react"
+import { use, useEffect, useRef, useState } from "react"
 import {
   ArrowUp,
   AudioLines,
@@ -22,6 +22,7 @@ import BottomWavePlayer from "@/app/editor/bottom-wave-player"
 import { toast } from "@/components/ui/toast"
 import updateSongChords from "@/app/editor/updateSongChords"
 import { useRouter } from "next/navigation"
+import loadEditor from "@/app/editor/loadEditor"
 
 interface Chord {
   id: string
@@ -51,7 +52,7 @@ function validateChord(line: string) {
   )
 }
 
-function parseLine(line: string, repeat = false) {
+export function parseLine(line: string, repeat = false) {
   const chordRegex = /([A-G-])([#bm]*)/g
 
   const parsed = [...line.matchAll(chordRegex)]
@@ -321,6 +322,34 @@ export default function EditorPage({
     )
 
   const songData = use(searchParams)
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function load() {
+      const results = await loadEditor(songData.id, songData.name)
+
+      if (cancelled) return
+
+      if (results.type === "success") {
+        setSections(results.data ?? [])
+      } else {
+        toast.add({
+          type: "error",
+          title: "Couldn't load song",
+          description: results.error,
+        })
+      }
+    }
+
+    if (songData.id) {
+      void load()
+    }
+
+    return () => {
+      cancelled = true
+    }
+  }, [songData.id])
 
   const handleSaveChord = async (chord: string) => {
     try {
