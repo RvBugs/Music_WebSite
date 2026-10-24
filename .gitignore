@@ -37,3 +37,5 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/.idea/shelf/Uncommitted_changes_before_Merge_at_10_22_26__8_14PM__Changes_.xml
+/.idea/

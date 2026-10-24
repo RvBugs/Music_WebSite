@@ -37,7 +37,7 @@ export default async function createNewSong(name: string, timesig: string, scale
 
   const { data, error } = await supabase
     .from("song")
-    .insert([{ name: name, timesig: timesig, scale: scale, band: user.data.user?.id }])
+    .insert([{ name: name, timesig: timesig, scale: scale, band: user.data.user?.id ,cover: publicUrl }])
     .select("id ,name")
     .single()
 
