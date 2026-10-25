@@ -1,17 +1,32 @@
-import { Plus } from "lucide-react"
-import Playlist from "@/components/PlayListContainer"
-import FavouritePlayList from "@/components/FavouritePlaylist"
-import CreatePlaylistContainerBottom from "@/components/CreateNewButtonBottom"
-import CreateNewButtonTop from "@/components/CreateNewButtonTop"
+import Empty from "./empty"
+import { load } from "@/app/(mobile)/(basicLayout)/playlist/load"
+import HeaderPlaylist from "@/app/(mobile)/(basicLayout)/playlist/header"
+import PlaylistCards from "@/app/(mobile)/(basicLayout)/playlist/playlistCards"
 
+export default async function Page() {
+  const data = await load()
 
-export default function Elements() {
+  const renderData = () => {
+    switch (data.type) {
+      case "success": {
+        if (!data.data || data.data.length === 0) return <Empty />
+        return <PlaylistCards playlists={data.data} />
+      }
+
+      case "playlistNotFound": {
+        return <Empty />
+      }
+
+      default: {
+        return <Empty />
+      }
+    }
+  }
+
   return (
-    <div >
-      <Playlist />
-      <FavouritePlayList />
-      <CreatePlaylistContainerBottom containerType={"Playlist"} />
-    </div>
+    <>
+      <HeaderPlaylist />
+      {renderData()}
+    </>
   )
 }
-
