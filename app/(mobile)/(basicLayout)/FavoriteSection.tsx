@@ -65,7 +65,11 @@ export default function FavoriteSection({
           <div
             key={item.id}
             className="relative aspect-square overflow-hidden rounded-md bg-muted"
-            onClick={() => router.push(`/songs/${item.id}`)}
+            onClick={() =>
+              router.push(
+                `/${title === "Favorite Playlists" ? "playlist" : "songs"}/${item.id}`
+              )
+            }
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
