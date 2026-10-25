@@ -73,7 +73,7 @@ export default async function Page() {
   const favoritePlaylists = (playlists ?? []).map((playlist) => ({
     id: playlist.id,
     name: playlist.name,
-    cover: getCoverUrl(playlist.cover),
+    cover: playlist.cover,
   }))
 
   const hasFavorites = favoriteSongs.length > 0 || favoritePlaylists.length > 0

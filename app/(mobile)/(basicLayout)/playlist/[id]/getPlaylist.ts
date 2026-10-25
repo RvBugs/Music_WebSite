@@ -23,7 +23,8 @@ export type PlaylistWithSongs = {
   name: string
   description: string | null
   band: string
-  cover: string | null
+  cover: string | null,
+  favorite: boolean,
   songs: PlaylistSong[]
 }
 

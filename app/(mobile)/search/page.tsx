@@ -1,10 +1,21 @@
 "use client"
 
-import {useEffect, useState} from "react"
-import {ArrowUpLeft, ChevronRight, Heart, History, ListMusic, LoaderCircle, Music2, Search,} from "lucide-react"
+import { useEffect, useState } from "react"
+import {
+    ArrowUpLeft,
+    ChevronRight,
+    Heart,
+    History,
+    ListMusic,
+    LoaderCircle,
+    Music2,
+    Search,
+} from "lucide-react"
 import Link from "next/link"
 import HeaderSearch from "@/app/(mobile)/search/header-search"
-import RealTimeSearch, {type SearchResult,} from "./real-time-search"
+import RealTimeSearch, {
+    type SearchResult,
+} from "./real-time-search"
 
 const SEARCH_HISTORY_KEY = "recent-searches"
 const MAX_SEARCH_HISTORY = 10
@@ -37,7 +48,7 @@ export default function SearchPage() {
         }
     }, [])
 
-    // Real-time song search
+    // Real-time search for songs and playlists
     useEffect(() => {
         const searchQuery = query.trim()
 
@@ -133,11 +144,11 @@ export default function SearchPage() {
     return (
         <>
             <div className="sticky top-0 z-50 bg-background">
-                <HeaderSearch/>
+                <HeaderSearch />
 
                 {/* SEARCH INPUT */}
                 <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md">
-                    <Search className="size-6 shrink-0"/>
+                    <Search className="size-6 shrink-0" />
 
                     <div className="flex flex-1 items-center rounded-full bg-[#282828] px-4 py-2.5">
                         <input
@@ -149,33 +160,38 @@ export default function SearchPage() {
                                     saveSearch(query)
                                 }
                             }}
-                            placeholder="Search songs, albums, artists"
-                            aria-label="Search songs"
+                            placeholder="Search songs and playlists"
+                            aria-label="Search songs and playlists"
                             className="w-full bg-transparent text-sm outline-none placeholder:text-zinc-400"
                         />
 
                         {loading && (
-                            <LoaderCircle className="ml-2 size-4 shrink-0 animate-spin text-zinc-400"/>
+                            <LoaderCircle className="ml-2 size-4 shrink-0 animate-spin text-zinc-400" />
                         )}
                     </div>
 
-                    <ChevronRight className="size-6 shrink-0"/>
+                    <ChevronRight className="size-6 shrink-0" />
                 </section>
 
                 {/* SEARCH RESULTS DROPDOWN */}
                 {query.trim() && (
-                    <div
-                        className="absolute inset-x-4 top-full z-50 max-h-80 overflow-y-auto rounded-xl border bg-background shadow-lg">
+                    <div className="absolute inset-x-4 top-full z-50 max-h-80 overflow-y-auto rounded-xl border bg-background shadow-lg">
                         {error ? (
-                            <p className="p-4 text-sm text-destructive">{error}</p>
+                            <p className="p-4 text-sm text-destructive">
+                                {error}
+                            </p>
                         ) : results.length > 0 ? (
-                            results.map((song) => {
-                                const coverUrl = getCoverUrl(song.cover)
+                            results.map((item) => {
+                                const coverUrl = getCoverUrl(item.cover)
 
                                 return (
                                     <Link
-                                        key={song.id}
-                                        href={`/songs/${song.id}`}
+                                        key={`${item.type}-${item.id}`}
+                                        href={
+                                            item.type === "song"
+                                                ? `/songs/${item.id}`
+                                                : `/playlist/${item.id}`
+                                        }
                                         onClick={() => saveSearch(query)}
                                         className="flex items-center gap-3 p-3 transition-colors hover:bg-muted"
                                     >
@@ -184,28 +200,37 @@ export default function SearchPage() {
                                             <img
                                                 src={coverUrl}
                                                 alt=""
-                                                className="size-11 rounded-md object-cover"
+                                                className="size-11 shrink-0 rounded-md object-cover"
                                             />
                                         ) : (
-                                            <div
-                                                className="flex size-11 items-center justify-center rounded-md bg-muted">
-                                                <Music2 className="size-5 text-muted-foreground"/>
+                                            <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-muted">
+                                                {item.type === "song" ? (
+                                                    <Music2 className="size-5 text-muted-foreground" />
+                                                ) : (
+                                                    <ListMusic className="size-5 text-muted-foreground" />
+                                                )}
                                             </div>
                                         )}
 
-                                        <span className="truncate text-sm font-medium">
-                      {song.name}
-                    </span>
+                                        <div className="min-w-0 flex-1">
+                                            <p className="truncate text-sm font-medium">
+                                                {item.name}
+                                            </p>
+
+                                            <p className="text-xs capitalize text-muted-foreground">
+                                                {item.type}
+                                            </p>
+                                        </div>
                                     </Link>
                                 )
                             })
                         ) : loading ? (
                             <p className="p-4 text-sm text-muted-foreground">
-                                Searching songs...
+                                Searching songs and playlists...
                             </p>
                         ) : (
                             <p className="p-4 text-sm text-muted-foreground">
-                                No songs found.
+                                No songs or playlists found.
                             </p>
                         )}
                     </div>
@@ -240,11 +265,11 @@ export default function SearchPage() {
                                 onClick={() => setQuery(text)}
                             >
                                 <div className="flex min-w-0 items-center gap-4">
-                                    <History className="size-5 shrink-0 text-zinc-400"/>
+                                    <History className="size-5 shrink-0 text-zinc-400" />
 
                                     <span className="truncate text-sm font-medium text-zinc-200">
-                    {text}
-                  </span>
+                                        {text}
+                                    </span>
                                 </div>
 
                                 <button
@@ -256,7 +281,7 @@ export default function SearchPage() {
                                     }}
                                     className="rounded-full p-1 transition-colors hover:bg-zinc-800"
                                 >
-                                    <ArrowUpLeft className="size-5 text-zinc-400"/>
+                                    <ArrowUpLeft className="size-5 text-zinc-400" />
                                 </button>
                             </div>
                         ))}
@@ -269,24 +294,30 @@ export default function SearchPage() {
                         type="button"
                         className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
                     >
-                        <Music2 className="size-6"/>
-                        <span className="text-sm font-semibold">New releases</span>
+                        <Music2 className="size-6" />
+                        <span className="text-sm font-semibold">
+                            New releases
+                        </span>
                     </button>
 
                     <button
                         type="button"
                         className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
                     >
-                        <Heart className="size-6"/>
-                        <span className="text-sm font-semibold">Favorites</span>
+                        <Heart className="size-6" />
+                        <span className="text-sm font-semibold">
+                            Favorites
+                        </span>
                     </button>
 
                     <button
                         type="button"
                         className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
                     >
-                        <ListMusic className="size-6"/>
-                        <span className="text-sm font-semibold">Playlists</span>
+                        <ListMusic className="size-6" />
+                        <span className="text-sm font-semibold">
+                            Playlists
+                        </span>
                     </button>
                 </section>
             </main>

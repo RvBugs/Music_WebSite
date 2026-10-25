@@ -2,6 +2,7 @@ import getPlaylistFromId from "@/app/(mobile)/(basicLayout)/playlist/[id]/getPla
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Plus } from "lucide-react"
 import Link from "next/link"
+import FavoritePlayListButton from "@/app/(mobile)/(basicLayout)/playlist/[id]/FavoritePlaylist";
 
 function getCover(cover: string | null) {
   if (!cover) return "/img.png"
@@ -70,6 +71,11 @@ export default async function Page({
               })}
             </p>
           </div>
+          {playlist.favorite ? (
+              <FavoritePlayListButton id={`${playlist.id}`} fav={false} />
+          ) : (
+              <FavoritePlayListButton id={`${playlist.id}`} fav={true} />
+          )}
         </div>
 
         {playlist.description && (
@@ -79,7 +85,7 @@ export default async function Page({
           </div>
         )}
 
-        <div className="flex flex-row items-center justify-between pt-4">
+        <div className="flex flex-row items-center justify-between">
           <p className="text-sm font-medium text-muted-foreground">
             Songs ({playlist.songs.length})
           </p>

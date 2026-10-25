@@ -1,4 +1,3 @@
-
 "use server"
 
 import { createClient } from "@/lib/supabase/server"
@@ -7,6 +6,7 @@ export type SearchResult = {
     id: string | number
     name: string
     cover: string | null
+    type: "song" | "playlist"
 }
 
 export default async function RealTimeSearch(
@@ -26,19 +26,42 @@ export default async function RealTimeSearch(
         return { success: false, data: [], error: "Please log in to search." }
     }
 
-    const { data, error } = await supabase
-        .from("song")
-        .select("id, name, cover")
-        .eq("band", userId)
-        .ilike("name", `%${trimmedQuery}%`)
-        .limit(10)
+    const [songsResult, playlistsResult] = await Promise.all([
+        supabase
+            .from("song")
+            .select("id, name, cover")
+            .eq("band", userId)
+            .ilike("name", `%${trimmedQuery}%`)
+            .limit(10),
 
-    if (error) {
-        return { success: false, data: [], error: error.message }
+        supabase
+            .from("playlist")
+            .select("id, name, cover")
+            .eq("band", userId)
+            .ilike("name", `%${trimmedQuery}%`)
+            .limit(10),
+    ])
+
+    if (songsResult.error) {
+        return { success: false, data: [], error: songsResult.error.message }
     }
+
+    if (playlistsResult.error) {
+        return { success: false, data: [], error: playlistsResult.error.message }
+    }
+
+    const songs: SearchResult[] = (songsResult.data ?? []).map((song) => ({
+        ...song,
+        type: "song",
+    }))
+
+    const playlists: SearchResult[] = (playlistsResult.data ?? []).map((playlist) => ({
+        ...playlist,
+        type: "playlist",
+    }))
 
     return {
         success: true,
-        data: data ?? [],
+        data: [...songs, ...playlists],
     }
 }
