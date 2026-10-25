@@ -1,103 +1,99 @@
-import { CardComponent } from "@/components/CardComponent"
-import { Button } from "@/components/ui/button"
-import QuickPickContainers from "@/components/QuickPickContainers"
 import { createClient } from "@/lib/supabase/server"
-import logoutAction from "@/app/(mobile)/(basicLayout)/logout-action"
-import Logout from "@/app/(mobile)/(basicLayout)/logout"
+import HeaderHome from "@/app/(mobile)/(basicLayout)/header-home"
+import FavoriteSection from "./FavoriteSection"
+import Empty from "./empty"
+
+type CoverData = {
+  data?: {
+    publicUrl?: string
+  }
+}
+
+function getCoverUrl(cover: string | null): string {
+  if (!cover) return ""
+
+  try {
+    return (JSON.parse(cover) as CoverData).data?.publicUrl ?? ""
+  } catch {
+    return ""
+  }
+}
 
 export default async function Page() {
-
   const supabase = await createClient()
+  const { data: authData } = await supabase.auth.getUser()
+  const userId = authData.user?.id
 
-  const data = await supabase.auth.getUser()
+  if (!userId) {
+    return <div>Please log in to view your favorites.</div>
+  }
+
+  const { data: user, error: userError } = await supabase
+    .from("band")
+    .select("*")
+    .eq("id", userId)
+    .single()
+
+  if (userError || !user) {
+    return <div>User not found</div>
+  }
+
+  const [
+    { data: songs, error: songsError },
+    { data: playlists, error: playlistsError },
+  ] = await Promise.all([
+    supabase.from("song").select("*").eq("band", userId).eq("favourite", true),
+
+    supabase
+      .from("playlist")
+      .select("*")
+      .eq("band", userId)
+      .eq("favorite", true),
+  ])
+
+  if (songsError || playlistsError) {
+    return <div>Could not load your favorites.</div>
+  }
+
+  const avatarPath = (user.avatar as string | null)
+    ?.split("/")
+    .slice(1)
+    .join("/")
+
+  const avatarUrl = avatarPath
+    ? supabase.storage.from("band").getPublicUrl(avatarPath).data.publicUrl
+    : ""
+
+  const favoriteSongs = (songs ?? []).map((song) => ({
+    id: song.id,
+    name: song.name,
+    cover: getCoverUrl(song.cover),
+  }))
+
+  const favoritePlaylists = (playlists ?? []).map((playlist) => ({
+    id: playlist.id,
+    name: playlist.name,
+    cover: getCoverUrl(playlist.cover),
+  }))
+
+  const hasFavorites = favoriteSongs.length > 0 || favoritePlaylists.length > 0
 
   return (
-    <div className="flex flex-col gap-8 py-8">
-      <div className="flex flex-col justify-start gap-4 px-4 lg:px-16">
-        <div className="flex flex-row items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/cover.jpg" alt="cover" className="size-12 rounded-full" />
-          <div className="flex flex-col">
-            <span className="text-sm text-muted-foreground">
-              {data.data.user?.email}
-            </span>
-            <span className="text-sm font-medium">Quick Picks</span>
-          </div>
-        </div>
+    <div className="flex flex-col gap-4 py-1">
+      <HeaderHome img={avatarUrl} />
 
-        <Logout />
+      {hasFavorites ? (
+        <>
+          <FavoriteSection title="Favorite Songs" items={favoriteSongs} />
 
-         <div className="grid w-full grid-cols-3 grid-rows-2 gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/06c1f1b9752dde1407d0bbb6e37f5bcc.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
+          <FavoriteSection
+            title="Favorite Playlists"
+            items={favoritePlaylists}
           />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/b206258a9bec6654038de9c3c78e9892.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/59e4b33f8f6e7d2e3805ee75e8e6e0ae.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/356a66f7e0b35a47d9ec398adbb870bc.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/044532f1a427964c90ef86729d71399d.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/94caf6136a3014cd173fca6ffd439c63.jpg"
-            alt="cover"
-            className="col-span-1 aspect-square rounded-md object-cover"
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-8 px-4 lg:px-16">
-        <section className="flex flex-col gap-4">
-          <span className="font-medium">Favourite PlayList</span>
-          <div className="flex scrollbar-none flex-row gap-4 overflow-x-scroll">
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"} />
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
-            <CardComponent title={"Playlist"} description={"2026 playlist songs"}/>
-          </div>
-        </section>
-
-        <section className="flex flex-col gap-4">
-          <span className="font-medium">Favourite Songs</span>
-          <div className="flex scrollbar-none flex-row gap-4 overflow-x-scroll">
-            <div className="min-w-80">
-              <QuickPickContainers />
-              <QuickPickContainers />
-              <QuickPickContainers />
-              <QuickPickContainers />
-            </div>
-            <div className="min-w-80">
-              <QuickPickContainers />
-              <QuickPickContainers />
-              <QuickPickContainers />
-              <QuickPickContainers />
-            </div>
-          </div>
-        </section>
-      </div>
+        </>
+      ) : (
+        <Empty />
+      )}
     </div>
   )
 }

@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, EditIcon, StarIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
+import favoriteSong from "@/app/(mobile)/(basicLayout)/songs/[id]/favoriteSong"
+import { toast } from "@/components/ui/toast"
+import FavoriteSongButton from "@/app/(mobile)/(basicLayout)/songs/[id]/FavoriteSong"
 
 const SLOTS = 4
 
@@ -90,9 +93,11 @@ export default async function Page({
               )}
             </p>
           </div>
-          <Button aria-label="star" variant="ghost" size="icon">
-            <StarIcon className="size-5 fill-yellow-300 text-yellow-300" />
-          </Button>
+          {results.data && results.data?.favourite ? (
+            <FavoriteSongButton id={`${results.data?.id}`} fav={false} />
+          ) : (
+            <FavoriteSongButton id={`${results.data?.id}`} fav={true} />
+          )}
         </div>
         <div className="flex h-12 w-full flex-col rounded-md bg-muted/50 p-2">
           <p className="text-xs text-muted-foreground">Scale</p>
