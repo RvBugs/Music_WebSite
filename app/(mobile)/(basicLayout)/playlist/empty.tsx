@@ -12,7 +12,7 @@ export default function Empty() {
       <div className="h-[70vh] w-full">
         <main className="flex h-[65vh] w-full flex-col items-center justify-center gap-6 px-12 text-center">
           <div className="flex size-40 items-center justify-center rounded-full bg-muted">
-            <section className="text-6xl text-green-800 font-semibold tracking-tight">CREATE PLAYLIST!</section>
+            <section className="text-6xl text-green-800 font-semibold tracking-tight">404</section>
           </div>
 
           <div className="space-y-2">

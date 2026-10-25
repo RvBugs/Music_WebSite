@@ -20,5 +20,10 @@ export default async function loginAction(email: string, password: string) {
   if (error) return { error: error.message }
 
   revalidatePath("/", "layout")
-  return {}
+
+  console.log("login success")
+
+  return {
+    error: null,
+  }
 }
