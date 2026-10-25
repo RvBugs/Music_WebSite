@@ -1,3 +1,9 @@
-export default function Search() {
-  return <div>search</div>
+import SearchPage from "@/app/search/Searchpage"
+
+export default function Page() {
+  return (
+    <div>
+      <SearchPage />
+    </div>
+  )
 }
