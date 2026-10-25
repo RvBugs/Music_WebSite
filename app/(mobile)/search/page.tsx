@@ -1,215 +1,295 @@
 "use client"
 
-import { useState } from "react"
-import {
-  ArrowLeft,
-  Mic,
-  History,
-  ArrowUpLeft,
-  Music2,
-  Heart,
-  ListMusic,
-  Cast,
-  Play,
-  Pause,
-} from "lucide-react"
+import {useEffect, useState} from "react"
+import {ArrowUpLeft, ChevronRight, Heart, History, ListMusic, LoaderCircle, Music2, Search,} from "lucide-react"
+import Link from "next/link"
+import HeaderSearch from "@/app/(mobile)/search/header-search"
+import RealTimeSearch, {type SearchResult,} from "./real-time-search"
 
-const recentSearchCards = [
-  {
-    id: 1,
-    title: "Acoustic Pop Hits",
-    subtitle: "Popular Playlist",
-    image:
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop&q=80",
-  },
-  {
-    id: 2,
-    title: "Chill Lofi Beats",
-    subtitle: "Study & Relax",
-    image:
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&auto=format&fit=crop&q=80",
-  },
-  {
-    id: 3,
-    title: "Top Sinhala Classics",
-    subtitle: "Golden Hits",
-    image:
-      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&auto=format&fit=crop&q=80",
-  },
-  {
-    id: 4,
-    title: "English Pop 2026",
-    subtitle: "Top Charts",
-    image:
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80",
-  },
-]
-
-const recentSearchTextList = [
-  "Classical instrumentals",
-  "Acoustic guitar cover",
-  "Relaxing rain sounds",
-  "Workout motivation mix",
-  "Top 50 global tracks",
-  "Lofi hip hop radio",
-]
+const SEARCH_HISTORY_KEY = "recent-searches"
+const MAX_SEARCH_HISTORY = 10
 
 export default function SearchPage() {
-  const [isPlaying, setIsPlaying] = useState(false)
+    const [query, setQuery] = useState("")
+    const [results, setResults] = useState<SearchResult[]>([])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
+    const [recentSearches, setRecentSearches] = useState<string[]>([])
 
-  return (
-    <main className="min-h-screen w-full bg-black px-4 pb-40 text-white">
-      {/* SEARCH BAR */}
-      <section className="sticky top-0 z-40 flex items-center justify-between gap-3 bg-black/90 py-3 backdrop-blur-md">
-        <button
-          type="button"
-          aria-label="Go back"
-          onClick={() => window.history.back()}
-          className="p-1 text-zinc-400 transition-colors hover:text-white"
-        >
-          <ArrowLeft className="h-6 w-6" />
-        </button>
+    // Load search history from browser storage
+    useEffect(() => {
+        try {
+            const saved = localStorage.getItem(SEARCH_HISTORY_KEY)
 
-        <div className="flex flex-1 items-center rounded-full bg-[#282828] px-4 py-2.5">
-          <input
-            type="text"
-            placeholder="Search songs, albums, artists"
-            className="w-full bg-transparent text-sm text-white placeholder-zinc-400 outline-none"
-          />
-        </div>
+            if (saved) {
+                const parsed: unknown = JSON.parse(saved)
 
-        <button
-          type="button"
-          aria-label="Microphone"
-          className="p-1 text-zinc-400 transition-colors hover:text-white"
-        >
-          <Mic className="h-6 w-6" />
-        </button>
-      </section>
+                if (
+                    Array.isArray(parsed) &&
+                    parsed.every((item) => typeof item === "string")
+                ) {
+                    // eslint-disable-next-line react-hooks/set-state-in-effect
+                    setRecentSearches(parsed)
+                }
+            }
+        } catch {
+            setRecentSearches([])
+        }
+    }, [])
 
-      {/* RECENT SEARCH CARDS */}
-      <section className="mt-5 flex flex-col gap-3">
-        <h2 className="text-sm font-medium text-zinc-400">Recent searches</h2>
+    // Real-time song search
+    useEffect(() => {
+        const searchQuery = query.trim()
 
-        <div className="flex gap-4 overflow-x-auto pb-2">
-          {recentSearchCards.map((card) => (
-            <div
-              key={card.id}
-              className="flex max-w-[150px] min-w-[150px] cursor-pointer flex-col gap-2"
-            >
-              <div className="h-28 w-full overflow-hidden rounded-lg bg-zinc-800">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
+        if (!searchQuery) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setResults([])
+            setError("")
+            setLoading(false)
+            return
+        }
 
-              <div>
-                <p className="truncate text-sm font-semibold text-zinc-100">
-                  {card.title}
-                </p>
-                <p className="truncate text-xs text-zinc-400">
-                  {card.subtitle}
-                </p>
-              </div>
+        let cancelled = false
+
+        const timer = setTimeout(async () => {
+            setLoading(true)
+            setError("")
+
+            try {
+                const result = await RealTimeSearch(searchQuery)
+
+                if (cancelled) return
+
+                if (result.success) {
+                    setResults(result.data)
+                } else {
+                    setResults([])
+                    setError(result.error ?? "Search failed.")
+                }
+            } catch {
+                if (!cancelled) {
+                    setResults([])
+                    setError("Something went wrong while searching.")
+                }
+            } finally {
+                if (!cancelled) {
+                    setLoading(false)
+                }
+            }
+        }, 300)
+
+        return () => {
+            cancelled = true
+            clearTimeout(timer)
+        }
+    }, [query])
+
+    // Save a search query to browser history
+    function saveSearch(value: string) {
+        const search = value.trim()
+
+        if (!search) return
+
+        const updated = [
+            search,
+            ...recentSearches.filter(
+                (item) => item.toLowerCase() !== search.toLowerCase(),
+            ),
+        ].slice(0, MAX_SEARCH_HISTORY)
+
+        try {
+            localStorage.setItem(
+                SEARCH_HISTORY_KEY,
+                JSON.stringify(updated),
+            )
+            setRecentSearches(updated)
+        } catch {
+            // Ignore browser storage errors
+        }
+    }
+
+    // Clear saved search history
+    function clearSearchHistory() {
+        try {
+            localStorage.removeItem(SEARCH_HISTORY_KEY)
+        } catch {
+            // Ignore browser storage errors
+        }
+
+        setRecentSearches([])
+    }
+
+    // Get public cover image URL
+    function getCoverUrl(cover: string | null) {
+        if (!cover) return ""
+
+        try {
+            return JSON.parse(cover)?.data?.publicUrl ?? ""
+        } catch {
+            return ""
+        }
+    }
+
+    return (
+        <>
+            <div className="sticky top-0 z-50 bg-background">
+                <HeaderSearch/>
+
+                {/* SEARCH INPUT */}
+                <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md">
+                    <Search className="size-6 shrink-0"/>
+
+                    <div className="flex flex-1 items-center rounded-full bg-[#282828] px-4 py-2.5">
+                        <input
+                            type="text"
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                            onKeyDown={(event) => {
+                                if (event.key === "Enter") {
+                                    saveSearch(query)
+                                }
+                            }}
+                            placeholder="Search songs, albums, artists"
+                            aria-label="Search songs"
+                            className="w-full bg-transparent text-sm outline-none placeholder:text-zinc-400"
+                        />
+
+                        {loading && (
+                            <LoaderCircle className="ml-2 size-4 shrink-0 animate-spin text-zinc-400"/>
+                        )}
+                    </div>
+
+                    <ChevronRight className="size-6 shrink-0"/>
+                </section>
+
+                {/* SEARCH RESULTS DROPDOWN */}
+                {query.trim() && (
+                    <div
+                        className="absolute inset-x-4 top-full z-50 max-h-80 overflow-y-auto rounded-xl border bg-background shadow-lg">
+                        {error ? (
+                            <p className="p-4 text-sm text-destructive">{error}</p>
+                        ) : results.length > 0 ? (
+                            results.map((song) => {
+                                const coverUrl = getCoverUrl(song.cover)
+
+                                return (
+                                    <Link
+                                        key={song.id}
+                                        href={`/songs/${song.id}`}
+                                        onClick={() => saveSearch(query)}
+                                        className="flex items-center gap-3 p-3 transition-colors hover:bg-muted"
+                                    >
+                                        {coverUrl ? (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img
+                                                src={coverUrl}
+                                                alt=""
+                                                className="size-11 rounded-md object-cover"
+                                            />
+                                        ) : (
+                                            <div
+                                                className="flex size-11 items-center justify-center rounded-md bg-muted">
+                                                <Music2 className="size-5 text-muted-foreground"/>
+                                            </div>
+                                        )}
+
+                                        <span className="truncate text-sm font-medium">
+                      {song.name}
+                    </span>
+                                    </Link>
+                                )
+                            })
+                        ) : loading ? (
+                            <p className="p-4 text-sm text-muted-foreground">
+                                Searching songs...
+                            </p>
+                        ) : (
+                            <p className="p-4 text-sm text-muted-foreground">
+                                No songs found.
+                            </p>
+                        )}
+                    </div>
+                )}
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* RECENT SEARCH HISTORY */}
-      <section className="mt-4 flex flex-col gap-1">
-        {recentSearchTextList.map((text) => (
-          <div
-            key={text}
-            className="flex cursor-pointer items-center justify-between rounded-lg px-1 py-3 transition-colors hover:bg-zinc-900"
-          >
-            <div className="flex items-center gap-4">
-              <History className="h-5 w-5 shrink-0 text-zinc-400" />
-              <span className="text-sm font-medium text-zinc-200">{text}</span>
-            </div>
+            <main className="min-h-screen w-full px-4 pb-40 text-white">
+                {/* RECENT SEARCH CARDS */}
+                {/* Keep your existing recent search cards here if needed. */}
 
-            <ArrowUpLeft className="h-5 w-5 shrink-0 text-zinc-400" />
-          </div>
-        ))}
-      </section>
+                {/* RECENT SEARCH HISTORY */}
+                {!query.trim() && recentSearches.length > 0 && (
+                    <section className="mt-4 flex flex-col gap-1">
+                        <div className="mb-2 flex items-center justify-between">
+                            <h2 className="text-sm font-medium text-zinc-400">
+                                Recent searches
+                            </h2>
 
-      {/* THREE CATEGORY CARDS */}
-      <section className="mt-8 grid grid-cols-3 gap-3">
-        <button
-          type="button"
-          className="flex h-32 min-w-0 flex-col justify-between rounded-[30px] bg-[#202020] p-3 text-left transition-colors hover:bg-[#303030] sm:h-36 sm:p-5"
-        >
-          <Music2 className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
-          <span className="text-sm leading-tight font-semibold sm:text-base">
-            New releases
-          </span>
-        </button>
+                            <button
+                                type="button"
+                                onClick={clearSearchHistory}
+                                className="text-xs text-zinc-400 transition-colors hover:text-white"
+                            >
+                                Clear history
+                            </button>
+                        </div>
 
-        <button
-          type="button"
-          className="flex h-32 min-w-0 flex-col justify-between rounded-[30px] bg-[#202020] p-3 text-left transition-colors hover:bg-[#303030] sm:h-36 sm:p-5"
-        >
-          <Heart className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
-          <span className="text-sm leading-tight font-semibold sm:text-base">
-            Favorites
-          </span>
-        </button>
+                        {recentSearches.map((text) => (
+                            <div
+                                key={text}
+                                className="flex cursor-pointer items-center justify-between rounded-lg px-1 py-3 transition-colors hover:bg-zinc-900"
+                                onClick={() => setQuery(text)}
+                            >
+                                <div className="flex min-w-0 items-center gap-4">
+                                    <History className="size-5 shrink-0 text-zinc-400"/>
 
-        <button
-          type="button"
-          className="flex h-32 min-w-0 flex-col justify-between rounded-[30px] bg-[#202020] p-3 text-left transition-colors hover:bg-[#303030] sm:h-36 sm:p-5"
-        >
-          <ListMusic className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
-          <span className="text-sm leading-tight font-semibold sm:text-base">
-            Playlists
-          </span>
-        </button>
-      </section>
+                                    <span className="truncate text-sm font-medium text-zinc-200">
+                    {text}
+                  </span>
+                                </div>
 
-      {/* MINI MUSIC PLAYER - ABOVE BOTTOM NAVIGATION */}
-      <div className="fixed inset-x-0 bottom-[64px] z-[100] bg-[#202020] shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
-        <div className="flex min-h-[76px] items-center gap-3 px-3 py-2 sm:gap-4 sm:px-5">
-          {/* SONG COVER */}
-          <img
-            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=160&auto=format&fit=crop&q=80"
-            alt="Song cover"
-            className="h-14 w-14 shrink-0 rounded-sm object-cover"
-          />
+                                <button
+                                    type="button"
+                                    aria-label={`Search again for ${text}`}
+                                    onClick={(event) => {
+                                        event.stopPropagation()
+                                        setQuery(text)
+                                    }}
+                                    className="rounded-full p-1 transition-colors hover:bg-zinc-800"
+                                >
+                                    <ArrowUpLeft className="size-5 text-zinc-400"/>
+                                </button>
+                            </div>
+                        ))}
+                    </section>
+                )}
 
-          {/* SONG DETAILS */}
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-semibold text-white">
-              Original Song - Milton Malla
-            </p>
-            <p className="mt-1 truncate text-sm text-zinc-400">2FORTY2</p>
-          </div>
+                {/* THREE CATEGORY CARDS */}
+                <section className="mt-8 grid grid-cols-3 gap-3">
+                    <button
+                        type="button"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                    >
+                        <Music2 className="size-6"/>
+                        <span className="text-sm font-semibold">New releases</span>
+                    </button>
 
-          {/* CAST BUTTON */}
-          <button
-            type="button"
-            aria-label="Cast"
-            className="shrink-0 p-1 text-white transition-colors hover:text-zinc-400"
-          >
-            <Cast className="h-7 w-7 sm:h-8 sm:w-8" />
-          </button>
+                    <button
+                        type="button"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                    >
+                        <Heart className="size-6"/>
+                        <span className="text-sm font-semibold">Favorites</span>
+                    </button>
 
-          {/* PLAY / PAUSE BUTTON */}
-          <button
-            type="button"
-            aria-label={isPlaying ? "Pause" : "Play"}
-            onClick={() => setIsPlaying((previous) => !previous)}
-            className="shrink-0 p-1 text-white transition-transform hover:scale-110"
-          >
-            {isPlaying ? (
-              <Pause className="h-8 w-8 fill-white sm:h-9 sm:w-9" />
-            ) : (
-              <Play className="h-8 w-8 fill-white sm:h-9 sm:w-9" />
-            )}
-          </button>
-        </div>
-      </div>
-    </main>
-  )
+                    <button
+                        type="button"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                    >
+                        <ListMusic className="size-6"/>
+                        <span className="text-sm font-semibold">Playlists</span>
+                    </button>
+                </section>
+            </main>
+        </>
+    )
 }
