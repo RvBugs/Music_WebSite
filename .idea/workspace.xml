@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="setup page update">
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/[id]/getPlaylist.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/empty.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/load.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/createNewPlaylist.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/songPicker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/playlistCards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_18_2026_3_44_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_18_2026_3_44_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add loading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/account/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/Quicklink.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/icon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/pageB.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentcard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentlist.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/searchbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/newcomponent/useRecentSearchs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search/Searchpage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search/page.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,32 +44,53 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="fix-search" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;rajiWanigasingha&quot;
-  }
-}</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABJV3XmA&quot;,
-        &quot;number&quot;: 2
+      "state": "OPEN"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOU7KD_M8AAAABJV3XmA",
+        "number": 2
       },
-      &quot;lastSeen&quot;: 1792417464185
+      "lastSeen": 1792417464185
+    },
+    {
+      "id": {
+        "id": "PR_kwDOU7KD_M8AAAABKs_j5g",
+        "number": 11
+      },
+      "lastSeen": 1792997284487
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/RvBugs/Music_WebSite.git",
     "accountId": "4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "RvBugs",
+    "repository": "Music_WebSite"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -150,7 +174,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "newplaylist/vish",
+    "git-widget-placeholder": "#13 on fix-search",
     "javascript.preferred.runtime.type.id": "bun",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -165,7 +189,7 @@
     "nodejs_package_manager_path": "bun",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\prettier",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -255,16 +279,36 @@
       <option name="project" value="LOCAL" />
       <updated>1792610468605</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add loading">
+      <option name="closed" value="true" />
+      <created>1792998408174</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1792998408174</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add basic structure" />
     <MESSAGE value="add supabase client and proxy and login and register" />
     <MESSAGE value="setup page update" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup page update" />
+    <MESSAGE value="add loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading" />
   </component>
 </project>

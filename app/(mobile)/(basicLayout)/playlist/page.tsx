@@ -24,9 +24,9 @@ export default async function Page() {
   }
 
   return (
-    <>
+    <div className="h-screen">
       <HeaderPlaylist />
       {renderData()}
-    </>
+    </div>
   )
 }
