@@ -1,0 +1,9 @@
+import "../components/styless.css"
+
+type ToastProps = {
+  message: string
+}
+
+export default function Toast({ message }: ToastProps) {
+  return <div className={"toast" + (message ? " show" : "")}>{message}</div>
+}
