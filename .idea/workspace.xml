@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add basic structure">
-      <change afterPath="$PROJECT_DIR$/app/account/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/playlist/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/search/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/songs/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/QuickPickContainers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image.jpg" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="setup page update">
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/[id]/getPlaylist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/empty.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/load.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/createNewPlaylist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/new/songPicker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/playlistCards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_18_2026_3_44_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_18_2026_3_44_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PlayListCardComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-provider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,20 +27,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="37" />
+    <option name="cachedIndexableFilesCount" value="174" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,12 +52,86 @@
     &quot;assignee&quot;: &quot;rajiWanigasingha&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
-    &quot;accountId&quot;: &quot;c4c8cd9a-48a8-4d9c-a22c-5712916636e8&quot;
-  }
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABJV3XmA&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1792417464185
+    }
+  ]
 }</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RvBugs/Music_WebSite.git",
+    "accountId": "4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000003544" />
+      <entry key="MS500" value="1.003235041645838" />
+      <entry key="S2" value="1.238489889638766" />
+      <entry key="S5" value="1.563953635794563" />
+      <entry key="S10" value="1.7689569267885288" />
+      <entry key="S30" value="2.1840812962296114" />
+      <entry key="S60" value="2.65704939743528" />
+      <entry key="M2" value="3.4491177064890874" />
+      <entry key="M5" value="4.594611963179046" />
+      <entry key="M10" value="5.264166306295041" />
+      <entry key="M15" value="5.961897501217" />
+      <entry key="M30" value="10.441097164699976" />
+      <entry key="H1" value="20.26427564626234" />
+      <entry key="H2" value="31.101678672588545" />
+      <entry key="H4" value="39.243744006956625" />
+      <entry key="D1" value="47.992899070008406" />
+      <entry key="W1" value="49.707530690411964" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="3.674366738534421E-300" />
+      <entry key="S10" value="2.3544256465245103E-150" />
+      <entry key="S30" value="2.3058301721996293E-50" />
+      <entry key="S60" value="2.5374068966850786E-25" />
+      <entry key="M2" value="8.637886736890911E-13" />
+      <entry key="M5" value="2.8823250026119347E-5" />
+      <entry key="M10" value="0.00929493639116237" />
+      <entry key="M15" value="0.06375239893123658" />
+      <entry key="M30" value="0.4373086671715158" />
+      <entry key="H1" value="1.1453796354305383" />
+      <entry key="H2" value="1.8536769580465526" />
+      <entry key="H4" value="2.358182036755082" />
+      <entry key="D1" value="2.8820215336195085" />
+      <entry key="W1" value="2.9828547504835656" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="9.21809992554887E-12" />
+      <entry key="MS500" value="0.0077410353848671835" />
+      <entry key="S2" value="0.47860182370436627" />
+      <entry key="S5" value="1.1249950024081388" />
+      <entry key="S10" value="1.5165361689009915" />
+      <entry key="S30" value="2.0889553406525234" />
+      <entry key="S60" value="2.6069368899649112" />
+      <entry key="M2" value="3.423051014627667" />
+      <entry key="M5" value="4.583844307755082" />
+      <entry key="M10" value="5.267855099734007" />
+      <entry key="M15" value="6.021387038611039" />
+      <entry key="M30" value="10.874504099388808" />
+      <entry key="H1" value="21.40601690220571" />
+      <entry key="H2" value="32.952688246227034" />
+      <entry key="H4" value="41.60028942248175" />
+      <entry key="D1" value="50.87459531306732" />
+      <entry key="W1" value="52.690337525169014" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -63,35 +143,54 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "newplaylist/vish",
     "javascript.preferred.runtime.type.id": "bun",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/rajindawanigasingha/dev/music-website/app/account",
+    "last_opened_file_path": "C:/Users/vishw/WebstormProjects/Music_WebSite/app/(mobile)/(basicLayout)/playlist/new",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "bun",
-    "prettierjs.PrettierConfiguration.Package": "/home/rajindawanigasingha/dev/music-website/node_modules/prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\prettier",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/account" />
-      <recent name="$PROJECT_DIR$/app/songs" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist\new" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)" />
+      <recent name="$PROJECT_DIR$/app/register" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -109,6 +208,13 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="" />
@@ -119,6 +225,11 @@
       <workItem from="1792215581239" duration="1141000" />
       <workItem from="1792254443396" duration="11837000" />
       <workItem from="1792310327035" duration="7591000" />
+      <workItem from="1792480674320" duration="5039000" />
+      <workItem from="1792552328109" duration="8543000" />
+      <workItem from="1792586429129" duration="13284000" />
+      <workItem from="1792638032798" duration="5863000" />
+      <workItem from="1792931586639" duration="6108000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -128,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1792267674847</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add supabase client and proxy and login and register">
+      <option name="closed" value="true" />
+      <created>1792558266105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792558266105</updated>
+    </task>
+    <task id="LOCAL-00003" summary="setup page update">
+      <option name="closed" value="true" />
+      <created>1792610468604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1792610468605</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +263,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add basic structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic structure" />
+    <MESSAGE value="add supabase client and proxy and login and register" />
+    <MESSAGE value="setup page update" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup page update" />
   </component>
 </project>
