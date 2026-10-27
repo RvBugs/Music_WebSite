@@ -132,14 +132,14 @@ function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-50 hidden w-64 flex-col border-r bg-card md:flex">
+    <aside className="fixed inset-y-0 left-0 z-50 hidden w-64 flex-col border-r bg-[#f8f8f8] md:flex dark:bg-[#080808] ">
       <div className="flex h-16 items-center px-4">
         <Link
           href="/public"
           aria-label="Home"
           className="flex size-12 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <Image src="/icon.png" alt="logo" width={24} height={24} />
+          <Image src="/" alt="logo" width={24} height={24} />
         </Link>
       </div>
 
@@ -156,8 +156,8 @@ function Sidebar() {
                   className={cn(
                     "flex h-14 items-center gap-3 rounded-full px-4 text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring",
                     active
-                      ? "bg-secondary font-semibold text-secondary-foreground"
-                      : "font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
+                      ? "bg-[#dddedf] font-semibold text-secondary-foreground dark:bg-[#22292B] rounded-md"
+                      : "font-medium text-muted-foreground hover:bg-[#dfdfdf] hover:text-foreground dark:hover:bg-[#2a3335] hover:rounded-md rounded-md"
                   )}
                 >
                   <Icon size={24} strokeWidth={active ? 2.5 : 2} />

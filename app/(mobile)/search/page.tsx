@@ -147,10 +147,10 @@ export default function SearchPage() {
                 <HeaderSearch />
 
                 {/* SEARCH INPUT */}
-                <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md">
+                <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md ">
                     <Search className="size-6 shrink-0" />
 
-                    <div className="flex flex-1 items-center rounded-full bg-[#282828] px-4 py-2.5">
+                    <div className="flex flex-1 items-center rounded-full bg-[#ececec] px-4 py-2.5 dark:bg-[#22292B]">
                         <input
                             type="text"
                             value={query}
@@ -244,7 +244,7 @@ export default function SearchPage() {
                 {/* RECENT SEARCH HISTORY */}
                 {!query.trim() && recentSearches.length > 0 && (
                     <section className="mt-4 flex flex-col gap-1">
-                        <div className="mb-2 flex items-center justify-between">
+                        <div className="mb-2 flex items-center justify-between ">
                             <h2 className="text-sm font-medium text-zinc-400">
                                 Recent searches
                             </h2>
@@ -292,7 +292,7 @@ export default function SearchPage() {
                 <section className="mt-8 grid grid-cols-3 gap-3">
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg- p-3 text-left transition-opacity hover:opacity-80"
                     >
                         <Music2 className="size-6" />
                         <span className="text-sm font-semibold">
