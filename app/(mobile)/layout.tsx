@@ -17,7 +17,6 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
-
 const NAV_ITEMS: { href: string; label: string; icon: LucideIcon }[] = [
   { href: "/", label: "Home", icon: House },
   { href: "/playlist", label: "Playlist", icon: Disc3 },

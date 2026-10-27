@@ -80,7 +80,7 @@ export default async function Page() {
 
   return (
     <div className="flex flex-col gap-4 py-1 h-screen">
-      <HeaderHome img={avatarUrl} />
+      <HeaderHome img={avatarUrl} logout={true} />
 
       {hasFavorites ? (
         <>
