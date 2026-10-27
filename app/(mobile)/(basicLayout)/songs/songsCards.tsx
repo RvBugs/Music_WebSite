@@ -23,12 +23,12 @@ export default function SongsCards({ songs }: {songs: Song[]}) {
       </div>
       <div className="grid grid-cols-2 gap-4 pt-4">
         {songs.map((song) => {
-          if (!card) {
+          if (!card && song) {
             return (
               <div key={song.id} className="col-span-1" onClick={() => router.push(`/songs/${song.id}`)}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={JSON.parse(song.cover as string).data.publicUrl}
+                  src={song.cover ? JSON.parse(song.cover as string).data.publicUrl : "/disk.jpg"}
                   alt="songs"
                   className="aspect-square size-full max-h-35 rounded-md object-cover"
                 />
