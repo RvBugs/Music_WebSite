@@ -241,7 +241,7 @@ export default function Account() {
   }
 
   return (
-    <div className="mx-auto w-full rounded-lg pb-6 shadow-md">
+    <div className="mx-auto w-full rounded-lg pb-6 shadow-md ">
       {/* COVER PHOTO */}
       <div className="relative h-48 w-full overflow-hidden rounded-t-lg bg-muted">
         {user.avatar ? (
@@ -277,7 +277,7 @@ export default function Account() {
       </div>
 
       {/* PROFILE DETAILS */}
-      <div className="px-3 pt-24">
+      <div className="px-6 pt-24">
         <div className="flex flex-col gap-3">
           <div className="rounded-md bg-muted/50 p-3">
             <p className="mb-1 text-xs text-muted-foreground">Name</p>
@@ -308,7 +308,7 @@ export default function Account() {
       </div>
 
       {/* RESET PASSWORD */}
-      <div className="px-3 pt-8">
+      <div className="px-6 pt-8">
         <div className="mb-5">
           <div className="flex items-center gap-2">
             <LockKeyhole className="size-5 text-muted-foreground" />

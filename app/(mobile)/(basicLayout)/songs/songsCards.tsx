@@ -21,7 +21,7 @@ export default function SongsCards({ songs }: {songs: Song[]}) {
           <Rows3 />
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-4 pt-4">
+      <div className="grid grid-cols-2 gap-4 pt-4 lg:grid-cols-5">
         {songs.map((song) => {
           if (!card && song) {
             return (

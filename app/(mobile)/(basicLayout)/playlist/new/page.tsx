@@ -224,7 +224,7 @@ export default function NewPlaylistPage() {
               Enter the basic information for your new playlist.
             </FieldDescription>
 
-            <FieldGroup className="mt-5 gap-5">
+            <FieldGroup className="mt-5 gap-5 ">
               {/* Cover image */}
               <Field className="gap-2">
                 <FieldLabel htmlFor="playlist-cover">
@@ -236,7 +236,7 @@ export default function NewPlaylistPage() {
                   id="playlist-cover"
                   type="file"
                   accept="image/png,image/jpeg,image/webp"
-                  className="hidden"
+                  className="hidden flex-row  "
                   disabled={loading}
                   onChange={(event) => {
                     handleImageChange(event.target.files?.[0])
@@ -244,7 +244,7 @@ export default function NewPlaylistPage() {
                   }}
                 />
 
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div className="flex flex-col gap-3">
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
@@ -267,7 +267,7 @@ export default function NewPlaylistPage() {
                     )}
                   </button>
 
-                  <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
+                  <div className="flex min-w-0 flex-1 flex-col items-start gap-2  ">
                     {imageError ? (
                       <p role="alert" className="text-sm text-destructive">
                         {imageError}
