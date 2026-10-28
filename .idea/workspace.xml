@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add loading">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2026_11_54_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2026_11_54_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/account/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/Quicklink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/icon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/pageB.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentcard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentlist.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/searchbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/useRecentSearchs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/Searchpage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/getUserInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/getUserInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/FavoriteSong.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/favoriteSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/getSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/empty.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/load.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/loading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/new/createNewSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/new/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/songsCards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/loading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/loginAction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +34,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="174" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -44,116 +47,116 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix-search" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOU7KD_M8AAAABJV3XmA",
-        "number": 2
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABJV3XmA&quot;,
+        &quot;number&quot;: 2
       },
-      "lastSeen": 1792417464185
+      &quot;lastSeen&quot;: 1792417464185
     },
     {
-      "id": {
-        "id": "PR_kwDOU7KD_M8AAAABKs_j5g",
-        "number": 11
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABKs_j5g&quot;,
+        &quot;number&quot;: 11
       },
-      "lastSeen": 1792997284487
+      &quot;lastSeen&quot;: 1792997284487
     }
   ]
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/RvBugs/Music_WebSite.git",
-    "accountId": "4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
+    &quot;accountId&quot;: &quot;4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "RvBugs",
-    "repository": "Music_WebSite"
+    &quot;owner&quot;: &quot;RvBugs&quot;,
+    &quot;repository&quot;: &quot;Music_WebSite&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000003544" />
-      <entry key="MS500" value="1.003235041645838" />
-      <entry key="S2" value="1.238489889638766" />
-      <entry key="S5" value="1.563953635794563" />
-      <entry key="S10" value="1.7689569267885288" />
-      <entry key="S30" value="2.1840812962296114" />
-      <entry key="S60" value="2.65704939743528" />
-      <entry key="M2" value="3.4491177064890874" />
-      <entry key="M5" value="4.594611963179046" />
-      <entry key="M10" value="5.264166306295041" />
-      <entry key="M15" value="5.961897501217" />
-      <entry key="M30" value="10.441097164699976" />
-      <entry key="H1" value="20.26427564626234" />
-      <entry key="H2" value="31.101678672588545" />
-      <entry key="H4" value="39.243744006956625" />
-      <entry key="D1" value="47.992899070008406" />
-      <entry key="W1" value="49.707530690411964" />
+      <entry key="MS100" value="1.4566349539518562" />
+      <entry key="MS500" value="3.4698495777211646" />
+      <entry key="S2" value="5.662589331015138" />
+      <entry key="S5" value="7.027060019261951" />
+      <entry key="S10" value="9.813066721820578" />
+      <entry key="S30" value="16.15393373151977" />
+      <entry key="S60" value="19.11533432610054" />
+      <entry key="M2" value="20.925733155042305" />
+      <entry key="M5" value="22.142887811452063" />
+      <entry key="M10" value="22.888017467312704" />
+      <entry key="M15" value="23.93490316363958" />
+      <entry key="M30" value="28.521594906300155" />
+      <entry key="H1" value="38.86221773161831" />
+      <entry key="H2" value="52.78745582544507" />
+      <entry key="H4" value="64.92883786567194" />
+      <entry key="D1" value="79.46026825562967" />
+      <entry key="W1" value="82.47953656678763" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="3.674366738534421E-300" />
-      <entry key="S10" value="2.3544256465245103E-150" />
-      <entry key="S30" value="2.3058301721996293E-50" />
-      <entry key="S60" value="2.5374068966850786E-25" />
-      <entry key="M2" value="8.637886736890911E-13" />
-      <entry key="M5" value="2.8823250026119347E-5" />
-      <entry key="M10" value="0.00929493639116237" />
-      <entry key="M15" value="0.06375239893123658" />
-      <entry key="M30" value="0.4373086671715158" />
-      <entry key="H1" value="1.1453796354305383" />
-      <entry key="H2" value="1.8536769580465526" />
-      <entry key="H4" value="2.358182036755082" />
-      <entry key="D1" value="2.8820215336195085" />
-      <entry key="W1" value="2.9828547504835656" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="1.1462205376131518E-250" />
+      <entry key="S30" value="8.41954042241262E-84" />
+      <entry key="S60" value="4.848647929904374E-42" />
+      <entry key="M2" value="3.7759198948467524E-21" />
+      <entry key="M5" value="1.3061379733711432E-8" />
+      <entry key="M10" value="1.9786522602828463E-4" />
+      <entry key="M15" value="0.0048967947444822635" />
+      <entry key="M30" value="0.12119808822597747" />
+      <entry key="H1" value="0.6029805442499551" />
+      <entry key="H2" value="1.344964968359786" />
+      <entry key="H4" value="2.008703273879127" />
+      <entry key="D1" value="2.8059954652829453" />
+      <entry key="W1" value="2.9714846963649486" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.21809992554887E-12" />
-      <entry key="MS500" value="0.0077410353848671835" />
-      <entry key="S2" value="0.47860182370436627" />
-      <entry key="S5" value="1.1249950024081388" />
-      <entry key="S10" value="1.5165361689009915" />
-      <entry key="S30" value="2.0889553406525234" />
-      <entry key="S60" value="2.6069368899649112" />
-      <entry key="M2" value="3.423051014627667" />
-      <entry key="M5" value="4.583844307755082" />
-      <entry key="M10" value="5.267855099734007" />
-      <entry key="M15" value="6.021387038611039" />
-      <entry key="M30" value="10.874504099388808" />
-      <entry key="H1" value="21.40601690220571" />
-      <entry key="H2" value="32.952688246227034" />
-      <entry key="H4" value="41.60028942248175" />
-      <entry key="D1" value="50.87459531306732" />
-      <entry key="W1" value="52.690337525169014" />
+      <entry key="MS100" value="1.3515666681022633" />
+      <entry key="MS500" value="3.3423868977121374" />
+      <entry key="S2" value="5.606203248682783" />
+      <entry key="S5" value="7.000727769052199" />
+      <entry key="S10" value="9.797470674497179" />
+      <entry key="S30" value="16.146945094076017" />
+      <entry key="S60" value="19.11141533326799" />
+      <entry key="M2" value="20.92364280313411" />
+      <entry key="M5" value="22.142011519248022" />
+      <entry key="M10" value="22.887651573487574" />
+      <entry key="M15" value="23.93917039191103" />
+      <entry key="M30" value="28.64155184140379" />
+      <entry key="H1" value="39.46319779223111" />
+      <entry key="H2" value="54.130440856137064" />
+      <entry key="H4" value="66.93612413301868" />
+      <entry key="D1" value="82.2659430865469" />
+      <entry key="W1" value="85.45097296666206" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -164,40 +167,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "#13 on fix-search",
-    "javascript.preferred.runtime.type.id": "bun",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/vishw/WebstormProjects/Music_WebSite/app/(mobile)/(basicLayout)/playlist/new",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "bun",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\prettier",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vishw/WebstormProjects/Music_WebSite/app/(mobile)/(basicLayout)/playlist/new&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
@@ -210,11 +214,11 @@
       <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
       <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -254,6 +258,9 @@
       <workItem from="1792586429129" duration="13284000" />
       <workItem from="1792638032798" duration="5863000" />
       <workItem from="1792931586639" duration="6108000" />
+      <workItem from="1793127008576" duration="52000" />
+      <workItem from="1793127075771" duration="462000" />
+      <workItem from="1793156675043" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
