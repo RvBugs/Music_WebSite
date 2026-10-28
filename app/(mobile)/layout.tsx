@@ -139,7 +139,7 @@ function Sidebar() {
           aria-label="Home"
           className="flex size-12 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <Image src="Notasick.svg" alt="logo" width={40} height={30} className=" ml-35 dark:brightness-0 dark:invert" />
+          <Image src="/NotaSick.svg" alt="logo" width={40} height={30} className=" ml-35 dark:brightness-0 dark:invert" />
           
           <h1 className="font-bold text-3xl">NOTASICK</h1>
         </Link>

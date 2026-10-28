@@ -19,7 +19,7 @@ export default function PasswordInput({
       <Input
         {...props}
         type={visible ? "text" : "password"}
-        className={`h-11 rounded-xl bg-muted/40 pr-11 ${className ?? ""}`}
+        className={`h-11 rounded-xl pr-11 ${className ?? ""}`}
       />
       <button
         type="button"

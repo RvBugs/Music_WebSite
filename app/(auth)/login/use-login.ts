@@ -53,7 +53,7 @@ export function useLogin() {
         return
       }
 
-
+      // stay in the loading state while the redirect happens
       router.replace("/")
       router.refresh()
     } catch (err) {

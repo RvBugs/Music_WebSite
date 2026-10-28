@@ -33,7 +33,7 @@ export default function FavoriteSection({
   if (items.length === 0) return null
 
   return (
-    <section className="flex flex-col gap-4 px-4 lg:px-16">
+    <section className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-4">
         <h2 className="text-sm font-semibold tracking-tight">{title}</h2>
 
