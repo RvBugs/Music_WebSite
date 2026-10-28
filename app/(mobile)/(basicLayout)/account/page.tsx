@@ -266,7 +266,7 @@ export default function Account() {
             <img
               src={user.avatar}
               alt="Profile picture"
-              className="size-36 rounded-full border-8 border-background bg-muted object-cover shadow-lg sm:size-42"
+              className="size-36 rounded-full border-8 border-background bg-muted object-cover  sm:size-42"
             />
           ) : (
             <div className="flex size-36 items-center justify-center rounded-full border-8 border-background bg-muted shadow-lg sm:size-42">
@@ -279,26 +279,26 @@ export default function Account() {
       {/* PROFILE DETAILS */}
       <div className="px-6 pt-24">
         <div className="flex flex-col gap-3">
-          <div className="rounded-md bg-muted/50 p-3">
+          <div className="rounded-md bg-[#F0F3F3] p-3 dark:bg-[#1B1D1E]">
             <p className="mb-1 text-xs text-muted-foreground">Name</p>
             <p className="text-sm font-medium">
               {user.name || "No name provided"}
             </p>
           </div>
 
-          <div className="rounded-md bg-muted/50 p-3">
-            <p className="mb-1 text-xs text-muted-foreground">Email</p>
+          <div className="rounded-md bg-[#F0F3F3] p-3 dark:bg-[#1B1D1E]">
+            <p className="mb-1 text-xs text-muted-foreground dark:bg-[#1B1D1E]">Email</p>
             <p className="text-sm font-medium break-all">
               {user.email || "No email available"}
             </p>
           </div>
 
-          <div className="rounded-md bg-muted/50 p-3">
+          <div className="rounded-md bg-[#F0F3F3] p-3 dark:bg-[#1B1D1E]">
             <p className="mb-1 text-xs text-muted-foreground">Band</p>
             <p className="text-sm font-medium">{user.name || "No band name"}</p>
           </div>
 
-          <div className="rounded-md bg-muted/50 p-3">
+          <div className="rounded-md bg-[#F0F3F3] p-3">
             <p className="mb-1 text-xs text-muted-foreground">Description</p>
             <p className="text-sm leading-relaxed">
               {user.description || "No description provided"}

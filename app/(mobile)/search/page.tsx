@@ -150,7 +150,7 @@ export default function SearchPage() {
                 <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md ">
                     <Search className="size-6 shrink-0" />
 
-                    <div className="flex flex-1 items-center rounded-full bg-[#ececec] px-4 py-2.5 dark:bg-[#22292B]">
+                    <div className="flex flex-1 items-center rounded-full bg-[#dddedf] px-4 py-2.5 dark:bg-[#22292B]">
                         <input
                             type="text"
                             value={query}
@@ -292,30 +292,30 @@ export default function SearchPage() {
                 <section className="mt-8 grid grid-cols-3 gap-3">
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg- p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B]"
                     >
-                        <Music2 className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <Music2 className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold text-gray-900 dark:text-white">
                             New releases
                         </span>
                     </button>
 
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B]"
                     >
-                        <Heart className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <Heart className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold  text-gray-900 dark:text-white">
                             Favorites
                         </span>
                     </button>
 
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B] "
                     >
-                        <ListMusic className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <ListMusic className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold  text-gray-900 dark:text-white">
                             Playlists
                         </span>
                     </button>
