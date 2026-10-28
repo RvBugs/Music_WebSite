@@ -36,7 +36,7 @@ export default function PlaylistCards({ playlists }: { playlists: Playlist[] }) 
           <Rows3 />
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-4 pt-4 lg:grid-cols-5 ">
+      <div className="grid grid-cols-2 gap-4 pt-4 lg:grid-cols-4">
         {playlists.map((playlist) => {
           if (!card) {
             return (

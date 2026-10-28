@@ -24,7 +24,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="h-screen lg:mx-16 lg:my-4">
+    <div className="h-screen lg:px-16 lg:py-4">
       <HeaderPlaylist />
       {renderData()}
     </div>

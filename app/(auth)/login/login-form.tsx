@@ -53,7 +53,7 @@ export default function LoginForm() {
             onBlur={() => email && validateField("email")}
             aria-invalid={!!fieldErrors.email || !!error}
             aria-describedby={fieldErrors.email ? "email-error" : undefined}
-            className="h-11 rounded-xl bg-muted/40"
+            className="h-11 rounded-xl"
             disabled={loading}
             required
           />

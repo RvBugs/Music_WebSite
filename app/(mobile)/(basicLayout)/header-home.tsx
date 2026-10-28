@@ -10,7 +10,7 @@ export default function HeaderHome({img ,logout}: {img: string, logout: boolean}
   const router = useRouter()
 
   return (
-    <div className="flex w-full flex-row items-center justify-between p-2 px-4 pt-4 pb-2">
+    <div className="flex w-full flex-row items-center justify-between pt-4 pb-2">
       <p className="text-2xl font-black">Music Chords</p>
       <div className="flex flex-row items-center gap-2">
         {logout && (

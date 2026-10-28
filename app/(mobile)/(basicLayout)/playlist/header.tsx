@@ -22,10 +22,6 @@ export default function HeaderPlaylist() {
         >
           <Plus className="size-5" />
         </Button>
-        <div className="rounded-full bg-muted/50 p-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/img.png" alt="img" className="size-5 object-cover" />
-        </div>
       </div>
     </div>
   )
