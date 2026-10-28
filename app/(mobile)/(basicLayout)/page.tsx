@@ -79,7 +79,7 @@ export default async function Page() {
   const hasFavorites = favoriteSongs.length > 0 || favoritePlaylists.length > 0
 
   return (
-    <div className="flex flex-col gap-4 py-1 h-screen lg:px-16 lg:my-4">
+    <div className="flex flex-col gap-4 py-1 h-screen lg:px-16 lg:my-4 px-4">
       <HeaderHome img={avatarUrl} logout={true} />
 
       {hasFavorites ? (
