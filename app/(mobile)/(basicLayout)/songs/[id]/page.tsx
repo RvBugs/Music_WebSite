@@ -56,8 +56,8 @@ export default async function Page({
   const results = await getSongFromId(songId.id)
 
   return (
-    <div>
-      <div className="relative flex max-h-30 w-full items-center justify-center overflow-hidden">
+    <div className="">
+      <div className="relative flex max-h-30 w-full items-center justify-center overflow-hidden ">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={JSON.parse(results.data?.cover as string).data.publicUrl}
@@ -75,7 +75,7 @@ export default async function Page({
           </Link>
         </Button>
       </div>
-      <div className="flex flex-col gap-2 px-4 py-2">
+      <div className="flex flex-col gap-2  py-2 px-4">
         <div className="flex w-full items-center justify-between">
           <div>
             <h1 className="text-2xl font-semibold">{results.data?.name}</h1>

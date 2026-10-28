@@ -298,7 +298,7 @@ export default function Account() {
             <p className="text-sm font-medium">{user.name || "No band name"}</p>
           </div>
 
-          <div className="rounded-md bg-[#F0F3F3] p-3">
+          <div className="rounded-md bg-[#F0F3F3] p-3 dark:bg-[#1B1D1E]">
             <p className="mb-1 text-xs text-muted-foreground">Description</p>
             <p className="text-sm leading-relaxed">
               {user.description || "No description provided"}

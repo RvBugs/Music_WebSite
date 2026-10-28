@@ -26,7 +26,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-screen lg:mx-16 lg:my-4">
       <HeaderSongs />
       {renderData()}
     </div>

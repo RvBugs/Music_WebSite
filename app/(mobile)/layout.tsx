@@ -133,13 +133,15 @@ function Sidebar() {
 
   return (
     <aside className="fixed inset-y-0 left-0 z-50 hidden w-64 flex-col border-r bg-[#f8f8f8] md:flex dark:bg-[#080808] ">
-      <div className="flex h-16 items-center px-4">
+      <div className="flex h-16 items-center px-4 lg:my-4">
         <Link
           href="/public"
           aria-label="Home"
           className="flex size-12 shrink-0 items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
-          <Image src="/" alt="logo" width={24} height={24} />
+          <Image src="Notasick.svg" alt="logo" width={40} height={30} className=" ml-35 dark:brightness-0 dark:invert" />
+          
+          <h1 className="font-bold text-3xl">NOTASICK</h1>
         </Link>
       </div>
 
