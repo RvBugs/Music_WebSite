@@ -4,25 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add loading">
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="match loading skeleton to new login layout">
+      <change afterPath="$PROJECT_DIR$/app/(auth)/_lib/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/forgot-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/forgotPasswordAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/use-forgot-password.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/reset-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/resetPasswordAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/use-reset-password.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2026_11_54_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/playlist/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/account/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/Quicklink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/icon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/pageB.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentcard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/recentlist.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/search.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/searchbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/newcomponent/useRecentSearchs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/Searchpage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/loginAction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,55 +45,55 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix-search" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOU7KD_M8AAAABJV3XmA",
-        "number": 2
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABJV3XmA&quot;,
+        &quot;number&quot;: 2
       },
-      "lastSeen": 1792417464185
+      &quot;lastSeen&quot;: 1792417464185
     },
     {
-      "id": {
-        "id": "PR_kwDOU7KD_M8AAAABKs_j5g",
-        "number": 11
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOU7KD_M8AAAABKs_j5g&quot;,
+        &quot;number&quot;: 11
       },
-      "lastSeen": 1792997284487
+      &quot;lastSeen&quot;: 1792997284487
     }
   ]
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/RvBugs/Music_WebSite.git",
-    "accountId": "4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
+    &quot;accountId&quot;: &quot;b22736e0-8b98-44bb-829f-d2fbc762443b&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "RvBugs",
-    "repository": "Music_WebSite"
+    &quot;owner&quot;: &quot;RvBugs&quot;,
+    &quot;repository&quot;: &quot;Music_WebSite&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -174,12 +175,12 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "#13 on fix-search",
+    "git-widget-placeholder": "signin/shairin",
     "javascript.preferred.runtime.type.id": "bun",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/vishw/WebstormProjects/Music_WebSite/app/(mobile)/(basicLayout)/playlist/new",
+    "last_opened_file_path": "C:/Users/alaai/WebstormProjects/Music_WebSite/app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
@@ -189,7 +190,7 @@
     "nodejs_package_manager_path": "bun",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\vishw\\WebstormProjects\\Music_WebSite\\node_modules\\prettier",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/home/rajindawanigasingha/dev/music-website/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -203,18 +204,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alaai\WebstormProjects\Music_WebSite\app" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist\new" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)" />
       <recent name="$PROJECT_DIR$/app/register" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alaai\WebstormProjects\Music_WebSite" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -254,6 +255,9 @@
       <workItem from="1792586429129" duration="13284000" />
       <workItem from="1792638032798" duration="5863000" />
       <workItem from="1792931586639" duration="6108000" />
+      <workItem from="1793010899074" duration="2014000" />
+      <workItem from="1793099969889" duration="4161000" />
+      <workItem from="1793162029663" duration="3993000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -287,7 +291,63 @@
       <option name="project" value="LOCAL" />
       <updated>1792998408174</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add shared authentication UI components">
+      <option name="closed" value="true" />
+      <created>1793162897415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1793162897415</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add reusable form field and alert componenets">
+      <option name="closed" value="true" />
+      <created>1793164644125</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793164644125</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add password input with show/hide toggle">
+      <option name="closed" value="true" />
+      <created>1793164920883</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1793164920883</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add shimmer skeleton for auth routes">
+      <option name="closed" value="true" />
+      <created>1793165112449</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793165112449</updated>
+    </task>
+    <task id="LOCAL-00009" summary="extract login logic into useLogin hook and typed action">
+      <option name="closed" value="true" />
+      <created>1793165215759</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1793165215759</updated>
+    </task>
+    <task id="LOCAL-00010" summary="redesign login page with split-screen layout">
+      <option name="closed" value="true" />
+      <created>1793165359343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1793165359343</updated>
+    </task>
+    <task id="LOCAL-00011" summary="match loading skeleton to new login layout">
+      <option name="closed" value="true" />
+      <created>1793165760729</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1793165760729</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +369,13 @@
     <MESSAGE value="add supabase client and proxy and login and register" />
     <MESSAGE value="setup page update" />
     <MESSAGE value="add loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loading" />
+    <MESSAGE value="add shared authentication UI components" />
+    <MESSAGE value="add reusable form field and alert componenets" />
+    <MESSAGE value="add password input with show/hide toggle" />
+    <MESSAGE value="add shimmer skeleton for auth routes" />
+    <MESSAGE value="extract login logic into useLogin hook and typed action" />
+    <MESSAGE value="redesign login page with split-screen layout" />
+    <MESSAGE value="match loading skeleton to new login layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="match loading skeleton to new login layout" />
   </component>
 </project>
