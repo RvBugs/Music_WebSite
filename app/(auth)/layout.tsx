@@ -1,0 +1,6 @@
+import type { ReactNode } from "react"
+
+
+export default function AuthLayout({ children }: { children: ReactNode }) {
+  return <div className="min-h-dvh w-full bg-background">{children}</div>
+}
