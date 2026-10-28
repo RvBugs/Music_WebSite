@@ -2,48 +2,58 @@
 
 import { createClient } from "@/lib/supabase/server"
 
+const AVATAR_BUCKET = "band"
+const DEFAULT_AUTH_ERROR = "User not authenticated."
+
+type SupabaseServerClient = Awaited<ReturnType<typeof createClient>>
+
+function failure(message: string) {
+    return {
+        success: false as const,
+        data: null,
+        error: message,
+    }
+}
+
+// The stored avatar value is a path like "<bucket>/<folder>/<file>";
+// the storage API wants everything after the first segment.
+function resolveAvatarUrl(supabase: SupabaseServerClient, storedPath: string) {
+    const objectPath = storedPath.split("/").splice(1, 3).join("/")
+
+    return supabase.storage.from(AVATAR_BUCKET).getPublicUrl(objectPath).data
+        .publicUrl
+}
+
 export default async function getUserInfo() {
     const supabase = await createClient()
 
     const {
         data: { user },
-        error,
+        error: authError,
     } = await supabase.auth.getUser()
 
-    if (error || !user) {
-        return {
-            success: false,
-            data: null,
-            error: error?.message ?? "User not authenticated.",
-        }
+    if (authError || !user) {
+        return failure(authError?.message ?? DEFAULT_AUTH_ERROR)
     }
 
-    const { data, error: bandError } = await supabase
+    const { data: band, error: bandError } = await supabase
         .from("band")
         .select("id, name, description, avatar")
         .eq("id", user.id)
         .single()
 
     if (bandError) {
-        return {
-            success: false,
-            data: null,
-            error: bandError.message,
-        }
+        return failure(bandError.message)
     }
 
-    const url = supabase.storage.from("band").getPublicUrl((data.avatar as string).split("/").splice(1,3).join("/")).data.publicUrl
-
-    console.log(url)
-
     return {
-        success: true,
+        success: true as const,
         data: {
             id: user.id,
             email: user.email,
-            name: data.name,
-            description: data.description,
-            avatar: url,
+            name: band.name,
+            description: band.description,
+            avatar: resolveAvatarUrl(supabase, band.avatar as string),
         },
     }
 }

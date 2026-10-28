@@ -21,7 +21,7 @@ export default function PlaylistCards({ playlists }: { playlists: Playlist[] }) 
   const [card, setCard] = useState<boolean>(false)
 
   return (
-    <div className="px-4 pt-4">
+    <div className="px-4 pt-4 ">
       <div className="flex flex-row items-center">
         <span className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
           Recent Playlists <ChevronDown className="size-4" />
@@ -36,7 +36,7 @@ export default function PlaylistCards({ playlists }: { playlists: Playlist[] }) 
           <Rows3 />
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-4 pt-4">
+      <div className="grid grid-cols-2 gap-4 pt-4 lg:grid-cols-5 ">
         {playlists.map((playlist) => {
           if (!card) {
             return (

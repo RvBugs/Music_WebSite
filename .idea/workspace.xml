@@ -4,24 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="match loading skeleton to new login layout">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/_lib/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/forgot-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/forgotPasswordAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/loading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/forgot-password/use-forgot-password.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/loading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/reset-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/resetPasswordAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/reset-password/use-reset-password.ts" afterDir="false" />
+    <list default="true" id="629b4f83-3ba6-4a77-8199-d4f30bd1532c" name="Changes" comment="add loading">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2026_11_54_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2026_11_54_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2026_5_31_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/getUserInfo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/getUserInfo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/account/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/FavoriteSong.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/favoriteSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/getSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/[id]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/empty.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/load.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/loading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/new/createNewSong.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/new/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(mobile)/(basicLayout)/songs/songsCards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login/loading.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/login/loginAction.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/login/page.tsx" beforeDir="false" />
     </list>
@@ -31,7 +34,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="174" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -81,7 +83,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/RvBugs/Music_WebSite.git&quot;,
-    &quot;accountId&quot;: &quot;b22736e0-8b98-44bb-829f-d2fbc762443b&quot;
+    &quot;accountId&quot;: &quot;4498da1c-ca58-4cd4-a2c8-a0859e5d0a7e&quot;
   },
   &quot;recentNewPullRequestHead&quot;: {
     &quot;server&quot;: {
@@ -100,61 +102,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000003544" />
-      <entry key="MS500" value="1.003235041645838" />
-      <entry key="S2" value="1.238489889638766" />
-      <entry key="S5" value="1.563953635794563" />
-      <entry key="S10" value="1.7689569267885288" />
-      <entry key="S30" value="2.1840812962296114" />
-      <entry key="S60" value="2.65704939743528" />
-      <entry key="M2" value="3.4491177064890874" />
-      <entry key="M5" value="4.594611963179046" />
-      <entry key="M10" value="5.264166306295041" />
-      <entry key="M15" value="5.961897501217" />
-      <entry key="M30" value="10.441097164699976" />
-      <entry key="H1" value="20.26427564626234" />
-      <entry key="H2" value="31.101678672588545" />
-      <entry key="H4" value="39.243744006956625" />
-      <entry key="D1" value="47.992899070008406" />
-      <entry key="W1" value="49.707530690411964" />
+      <entry key="MS100" value="1.4566349539518562" />
+      <entry key="MS500" value="3.4698495777211646" />
+      <entry key="S2" value="5.662589331015138" />
+      <entry key="S5" value="7.027060019261951" />
+      <entry key="S10" value="9.813066721820578" />
+      <entry key="S30" value="16.15393373151977" />
+      <entry key="S60" value="19.11533432610054" />
+      <entry key="M2" value="20.925733155042305" />
+      <entry key="M5" value="22.142887811452063" />
+      <entry key="M10" value="22.888017467312704" />
+      <entry key="M15" value="23.93490316363958" />
+      <entry key="M30" value="28.521594906300155" />
+      <entry key="H1" value="38.86221773161831" />
+      <entry key="H2" value="52.78745582544507" />
+      <entry key="H4" value="64.92883786567194" />
+      <entry key="D1" value="79.46026825562967" />
+      <entry key="W1" value="82.47953656678763" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="3.674366738534421E-300" />
-      <entry key="S10" value="2.3544256465245103E-150" />
-      <entry key="S30" value="2.3058301721996293E-50" />
-      <entry key="S60" value="2.5374068966850786E-25" />
-      <entry key="M2" value="8.637886736890911E-13" />
-      <entry key="M5" value="2.8823250026119347E-5" />
-      <entry key="M10" value="0.00929493639116237" />
-      <entry key="M15" value="0.06375239893123658" />
-      <entry key="M30" value="0.4373086671715158" />
-      <entry key="H1" value="1.1453796354305383" />
-      <entry key="H2" value="1.8536769580465526" />
-      <entry key="H4" value="2.358182036755082" />
-      <entry key="D1" value="2.8820215336195085" />
-      <entry key="W1" value="2.9828547504835656" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="1.1462205376131518E-250" />
+      <entry key="S30" value="8.41954042241262E-84" />
+      <entry key="S60" value="4.848647929904374E-42" />
+      <entry key="M2" value="3.7759198948467524E-21" />
+      <entry key="M5" value="1.3061379733711432E-8" />
+      <entry key="M10" value="1.9786522602828463E-4" />
+      <entry key="M15" value="0.0048967947444822635" />
+      <entry key="M30" value="0.12119808822597747" />
+      <entry key="H1" value="0.6029805442499551" />
+      <entry key="H2" value="1.344964968359786" />
+      <entry key="H4" value="2.008703273879127" />
+      <entry key="D1" value="2.8059954652829453" />
+      <entry key="W1" value="2.9714846963649486" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="9.21809992554887E-12" />
-      <entry key="MS500" value="0.0077410353848671835" />
-      <entry key="S2" value="0.47860182370436627" />
-      <entry key="S5" value="1.1249950024081388" />
-      <entry key="S10" value="1.5165361689009915" />
-      <entry key="S30" value="2.0889553406525234" />
-      <entry key="S60" value="2.6069368899649112" />
-      <entry key="M2" value="3.423051014627667" />
-      <entry key="M5" value="4.583844307755082" />
-      <entry key="M10" value="5.267855099734007" />
-      <entry key="M15" value="6.021387038611039" />
-      <entry key="M30" value="10.874504099388808" />
-      <entry key="H1" value="21.40601690220571" />
-      <entry key="H2" value="32.952688246227034" />
-      <entry key="H4" value="41.60028942248175" />
-      <entry key="D1" value="50.87459531306732" />
-      <entry key="W1" value="52.690337525169014" />
+      <entry key="MS100" value="1.3515666681022633" />
+      <entry key="MS500" value="3.3423868977121374" />
+      <entry key="S2" value="5.606203248682783" />
+      <entry key="S5" value="7.000727769052199" />
+      <entry key="S10" value="9.797470674497179" />
+      <entry key="S30" value="16.146945094076017" />
+      <entry key="S60" value="19.11141533326799" />
+      <entry key="M2" value="20.92364280313411" />
+      <entry key="M5" value="22.142011519248022" />
+      <entry key="M10" value="22.887651573487574" />
+      <entry key="M15" value="23.93917039191103" />
+      <entry key="M30" value="28.64155184140379" />
+      <entry key="H1" value="39.46319779223111" />
+      <entry key="H2" value="54.130440856137064" />
+      <entry key="H4" value="66.93612413301868" />
+      <entry key="D1" value="82.2659430865469" />
+      <entry key="W1" value="85.45097296666206" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -175,12 +177,12 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;signin/shairin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;javascript.preferred.runtime.type.id&quot;: &quot;bun&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alaai/WebstormProjects/Music_WebSite/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vishw/WebstormProjects/Music_WebSite/app/(mobile)/(basicLayout)/playlist/new&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -199,23 +201,24 @@
       <map>
         <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
         <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\alaai\WebstormProjects\Music_WebSite\app" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist\new" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)" />
       <recent name="$PROJECT_DIR$/app/register" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alaai\WebstormProjects\Music_WebSite" />
-      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
       <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app" />
+      <recent name="C:\Users\vishw\WebstormProjects\Music_WebSite\app\(mobile)\(basicLayout)\playlist" />
       <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -255,9 +258,9 @@
       <workItem from="1792586429129" duration="13284000" />
       <workItem from="1792638032798" duration="5863000" />
       <workItem from="1792931586639" duration="6108000" />
-      <workItem from="1793010899074" duration="2014000" />
-      <workItem from="1793099969889" duration="4161000" />
-      <workItem from="1793162029663" duration="3993000" />
+      <workItem from="1793127008576" duration="52000" />
+      <workItem from="1793127075771" duration="462000" />
+      <workItem from="1793156675043" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="add basic structure">
       <option name="closed" value="true" />
@@ -291,63 +294,7 @@
       <option name="project" value="LOCAL" />
       <updated>1792998408174</updated>
     </task>
-    <task id="LOCAL-00005" summary="add shared authentication UI components">
-      <option name="closed" value="true" />
-      <created>1793162897415</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1793162897415</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add reusable form field and alert componenets">
-      <option name="closed" value="true" />
-      <created>1793164644125</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1793164644125</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add password input with show/hide toggle">
-      <option name="closed" value="true" />
-      <created>1793164920883</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1793164920883</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add shimmer skeleton for auth routes">
-      <option name="closed" value="true" />
-      <created>1793165112449</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1793165112449</updated>
-    </task>
-    <task id="LOCAL-00009" summary="extract login logic into useLogin hook and typed action">
-      <option name="closed" value="true" />
-      <created>1793165215759</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1793165215759</updated>
-    </task>
-    <task id="LOCAL-00010" summary="redesign login page with split-screen layout">
-      <option name="closed" value="true" />
-      <created>1793165359343</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1793165359343</updated>
-    </task>
-    <task id="LOCAL-00011" summary="match loading skeleton to new login layout">
-      <option name="closed" value="true" />
-      <created>1793165760729</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1793165760729</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,13 +316,6 @@
     <MESSAGE value="add supabase client and proxy and login and register" />
     <MESSAGE value="setup page update" />
     <MESSAGE value="add loading" />
-    <MESSAGE value="add shared authentication UI components" />
-    <MESSAGE value="add reusable form field and alert componenets" />
-    <MESSAGE value="add password input with show/hide toggle" />
-    <MESSAGE value="add shimmer skeleton for auth routes" />
-    <MESSAGE value="extract login logic into useLogin hook and typed action" />
-    <MESSAGE value="redesign login page with split-screen layout" />
-    <MESSAGE value="match loading skeleton to new login layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="match loading skeleton to new login layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading" />
   </component>
 </project>
