@@ -15,8 +15,7 @@ function failure(message: string) {
     }
 }
 
-// The stored avatar value is a path like "<bucket>/<folder>/<file>";
-// the storage API wants everything after the first segment.
+
 function resolveAvatarUrl(supabase: SupabaseServerClient, storedPath: string) {
     const objectPath = storedPath.split("/").splice(1, 3).join("/")
 
@@ -47,7 +46,7 @@ export default async function getUserInfo() {
     }
 
     return {
-        success: true as const,
+        success: true,
         data: {
             id: user.id,
             email: user.email,
