@@ -8,10 +8,6 @@ export type PasswordCheck = {
   met: boolean
 }
 
-/**
- * Returns the first validation problem, or null when the form is valid.
- * The order of the checks decides which message the user sees first.
- */
 export function validatePasswordForm({
   current,
   next,
@@ -40,7 +36,7 @@ export function validatePasswordForm({
   return null
 }
 
-/** Live checklist shown under the password inputs. */
+
 export function getPasswordChecks(next: string, confirm: string): PasswordCheck[] {
   return [
     {

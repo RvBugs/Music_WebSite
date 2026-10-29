@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label"
 type PasswordFieldProps = {
   id: string
   label: string
-  /** Noun used in the toggle button label, e.g. "current password". */
   toggleNoun: string
   value: string
   visible: boolean
