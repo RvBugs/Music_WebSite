@@ -7,12 +7,10 @@ export default async function Page() {
 
   const data = await load()
 
-  console.log("hnbgjnvghnvnb", data);
-
   const renderData = () => {
     switch (data.type) {
       case "success" : {
-        return <div>{data.data !== null && data.data !== undefined ? <SongsCards songs={data.data} /> : null}</div>
+        return <div>{data.data !== undefined ? <SongsCards songs={data.data} /> : null}</div>
       }
 
       case "songNotFound": {
@@ -26,7 +24,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-screen lg:px-16 lg:py-4">
       <HeaderSongs />
       {renderData()}
     </div>

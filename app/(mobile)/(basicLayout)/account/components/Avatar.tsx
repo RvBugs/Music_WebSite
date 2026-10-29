@@ -22,7 +22,7 @@ export function Avatar({ src, className }: AvatarProps) {
   }
 
   return (
-
+    // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt="Profile picture" className={cn(frame, "object-cover")} />
   )
 }

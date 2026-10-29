@@ -262,7 +262,7 @@ export default function NewSongPage() {
                   }}
                 />
 
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}

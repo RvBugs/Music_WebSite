@@ -143,14 +143,14 @@ export default function SearchPage() {
 
     return (
         <>
-            <div className="sticky top-0 z-50 bg-background">
+            <div className="sticky top-0 z-50 bg-background lg:px-16 ">
                 <HeaderSearch />
 
                 {/* SEARCH INPUT */}
                 <section className="flex items-center gap-3 px-4 py-3 backdrop-blur-md ">
-                    <Search className="size-6 shrink-0" />
+                    <Search className="size-6 shrink-0 " />
 
-                    <div className="flex flex-1 items-center rounded-full bg-[#ececec] px-4 py-2.5 dark:bg-[#22292B]">
+                    <div className="flex flex-1 items-center rounded-full bg-[#dddedf]  px-4 py-2.5 dark:bg-[#22292B]">
                         <input
                             type="text"
                             value={query}
@@ -237,13 +237,13 @@ export default function SearchPage() {
                 )}
             </div>
 
-            <main className="min-h-screen w-full px-4 pb-40 text-white">
+            <main className="min-h-screen w-full px-4 pb-40 text-white  ">
                 {/* RECENT SEARCH CARDS */}
                 {/* Keep your existing recent search cards here if needed. */}
 
                 {/* RECENT SEARCH HISTORY */}
                 {!query.trim() && recentSearches.length > 0 && (
-                    <section className="mt-4 flex flex-col gap-1">
+                    <section className="mt-4 flex flex-col gap-1 lg:px-16">
                         <div className="mb-2 flex items-center justify-between ">
                             <h2 className="text-sm font-medium text-zinc-400">
                                 Recent searches
@@ -261,13 +261,13 @@ export default function SearchPage() {
                         {recentSearches.map((text) => (
                             <div
                                 key={text}
-                                className="flex cursor-pointer items-center justify-between rounded-lg px-1 py-3 transition-colors hover:bg-zinc-900"
+                                className="flex cursor-pointer items-center justify-between rounded-lg px-1 py-3 transition-colors hover:bg-[#ececec] hover:text-gray-900 dark:hover:bg-[#31393b]"
                                 onClick={() => setQuery(text)}
                             >
                                 <div className="flex min-w-0 items-center gap-4">
-                                    <History className="size-5 shrink-0 text-zinc-400" />
+                                    <History className="size-5 shrink-0 dark:text-zinc-400 text-zinc-400" />
 
-                                    <span className="truncate text-sm font-medium text-zinc-200">
+                                    <span className="truncate text-sm font-medium dark:text-zinc-200 text-zinc-400">
                                         {text}
                                     </span>
                                 </div>
@@ -289,33 +289,33 @@ export default function SearchPage() {
                 )}
 
                 {/* THREE CATEGORY CARDS */}
-                <section className="mt-8 grid grid-cols-3 gap-3">
+                <section className="mt-8 grid grid-cols-3 gap-3 lg:px-16">
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg- p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B]"
                     >
-                        <Music2 className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <Music2 className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold text-gray-900 dark:text-white">
                             New releases
                         </span>
                     </button>
 
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B]"
                     >
-                        <Heart className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <Heart className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold  text-gray-900 dark:text-white">
                             Favorites
                         </span>
                     </button>
 
                     <button
                         type="button"
-                        className="flex flex-col items-start gap-8 rounded-xl bg-muted p-3 text-left transition-opacity hover:opacity-80"
+                        className="flex flex-col items-start gap-8 rounded-xl bg-[#cacbcc] p-3 text-left transition-opacity hover:opacity-80 dark:bg-[#22292B] "
                     >
-                        <ListMusic className="size-6" />
-                        <span className="text-sm font-semibold">
+                        <ListMusic className="size-6  text-gray-900 dark:text-white" />
+                        <span className="text-sm font-semibold  text-gray-900 dark:text-white">
                             Playlists
                         </span>
                     </button>

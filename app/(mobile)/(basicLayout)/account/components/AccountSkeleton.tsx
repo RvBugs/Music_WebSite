@@ -3,7 +3,7 @@ import { Shimmer } from "./Shimmer"
 
 const DETAIL_ROWS = ["w-28", "w-48", "w-32", "w-full"]
 
-
+// Shaped like the real page so nothing jumps when data arrives.
 export function AccountSkeleton() {
   return (
     <div className="flex min-h-screen flex-col gap-4 py-1">
@@ -45,7 +45,7 @@ export function AccountSkeleton() {
           ))}
         </div>
 
-
+        {/* password card */}
         <Shimmer className="h-72 w-full rounded-2xl" />
       </div>
     </div>

@@ -46,7 +46,7 @@ export default async function getUserInfo() {
     }
 
     return {
-        success: true as const,
+        success: true,
         data: {
             id: user.id,
             email: user.email,
