@@ -4,29 +4,19 @@ import HeaderPlaylist from "@/app/(mobile)/(basicLayout)/playlist/header"
 import PlaylistCards from "@/app/(mobile)/(basicLayout)/playlist/playlistCards"
 
 export default async function Page() {
-  const data = await load()
+  const result = await load()
 
-  const renderData = () => {
-    switch (data.type) {
-      case "success": {
-        if (!data.data || data.data.length === 0) return <Empty />
-        return <PlaylistCards playlists={data.data} />
-      }
-
-      case "playlistNotFound": {
-        return <Empty />
-      }
-
-      default: {
-        return <Empty />
-      }
-    }
-  }
+  // Any non-success result is shown the same way as "no playlists".
+  const playlists = result.type === "success" ? (result.data ?? []) : []
 
   return (
     <div className="h-screen lg:px-16 lg:py-4">
       <HeaderPlaylist />
-      {renderData()}
+      {playlists.length > 0 ? (
+        <PlaylistCards playlists={playlists} />
+      ) : (
+        <Empty />
+      )}
     </div>
   )
 }
