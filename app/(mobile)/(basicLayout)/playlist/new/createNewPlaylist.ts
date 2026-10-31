@@ -10,6 +10,13 @@ export type RegisterResult = {
   cover?: string
 }
 
+type Supabase = Awaited<ReturnType<typeof createClient>>
+
+type UploadResult =
+  | { ok: true; filePath: string; url: string }
+  | { ok: false; error: string }
+
+const BUCKET = "band"
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024
 const EXTENSIONS: Record<string, string> = {
   "image/png": "png",
@@ -17,6 +24,55 @@ const EXTENSIONS: Record<string, string> = {
   "image/webp": "webp",
 }
 
+function fail(type: RegisterResult["type"], error: string): RegisterResult {
+  return { type, error }
+}
+
+function parseSongIds(raw: FormDataEntryValue | null): number[] {
+  return JSON.parse(String(raw ?? "[]"))
+}
+
+async function uploadCover(
+  supabase: Supabase,
+  userId: string,
+  cover: File,
+  ext: string
+): Promise<UploadResult> {
+  const filePath = `public/playlists/${userId}-${Date.now()}.${ext}`
+
+  const { error } = await supabase.storage
+    .from(BUCKET)
+    .upload(filePath, cover, { contentType: cover.type, upsert: false })
+
+  if (error) {
+    console.error(error)
+    return { ok: false, error: error.message }
+  }
+
+  const { data } = supabase.storage.from(BUCKET).getPublicUrl(filePath)
+
+  return { ok: true, filePath, url: data.publicUrl }
+}
+
+async function attachSongs(
+  supabase: Supabase,
+  userId: string,
+  playlistId: number,
+  songIds: number[]
+): Promise<string | null> {
+  const { error } = await supabase
+    .from("song")
+    .update({ playlist: playlistId })
+    .in("id", songIds)
+    .eq("band", userId)
+
+  if (error) {
+    console.error(error)
+    return error.message
+  }
+
+  return null
+}
 
 export default async function createNewPlaylist(
   formData: FormData
@@ -27,40 +83,25 @@ export default async function createNewPlaylist(
     data: { user },
   } = await supabase.auth.getUser()
 
-  if (!user) {
-    return { type: "userNotFound", error: "You must be signed in." }
-  }
+  if (!user) return fail("userNotFound", "You must be signed in.")
 
   const name = String(formData.get("name") ?? "").trim()
   const cover = formData.get("cover")
-  const songIds: number[] = JSON.parse(String(formData.get("songIds") ?? "[]"))
+  const songIds = parseSongIds(formData.get("songIds"))
 
-  if (!name) return { type: "error", error: "Playlist name is required." }
+  if (!name) return fail("error", "Playlist name is required.")
 
   if (!(cover instanceof File) || cover.size === 0) {
-    return { type: "uploadError", error: "Cover image is required." }
+    return fail("uploadError", "Cover image is required.")
   }
 
   const ext = EXTENSIONS[cover.type]
   if (!ext || cover.size > MAX_IMAGE_SIZE) {
-    return { type: "uploadError", error: "Invalid cover image." }
+    return fail("uploadError", "Invalid cover image.")
   }
 
-
-  const filePath = `public/playlists/${user.id}-${Date.now()}.${ext}`
-
-  const { error: uploadError } = await supabase.storage
-    .from("band")
-    .upload(filePath, cover, { contentType: cover.type, upsert: false })
-
-  if (uploadError) {
-    console.error(uploadError)
-    return { type: "uploadError", error: uploadError.message }
-  }
-
-  const { data: urlData } = supabase.storage.from("band").getPublicUrl(filePath)
-  const coverUrl = urlData.publicUrl
-
+  const upload = await uploadCover(supabase, user.id, cover, ext)
+  if (!upload.ok) return fail("uploadError", upload.error)
 
   const { data, error } = await supabase
     .from("playlist")
@@ -68,7 +109,7 @@ export default async function createNewPlaylist(
       name,
       favorite: false,
       band: user.id,
-      cover: coverUrl,
+      cover: upload.url,
     })
     .select("id, name")
     .single()
@@ -76,29 +117,19 @@ export default async function createNewPlaylist(
   if (error || !data) {
     console.error(error)
     // don't leave an orphan image behind
-    await supabase.storage.from("band").remove([filePath])
-    return { type: "error", error: error?.message ?? "Insert failed." }
+    await supabase.storage.from(BUCKET).remove([upload.filePath])
+    return fail("error", error?.message ?? "Insert failed.")
   }
 
+  const created = { id: data.id, name: data.name, cover: upload.url }
 
   if (songIds.length > 0) {
-    const { error: songsError } = await supabase
-      .from("song")
-      .update({ playlist: data.id })
-      .in("id", songIds)
-      .eq("band", user.id)
+    const songsError = await attachSongs(supabase, user.id, data.id, songIds)
 
     if (songsError) {
-      console.error(songsError)
-      return {
-        type: "songsError",
-        error: songsError.message,
-        id: data.id,
-        name: data.name,
-        cover: coverUrl,
-      }
+      return { type: "songsError", error: songsError, ...created }
     }
   }
 
-  return { type: "success", id: data.id, name: data.name, cover: coverUrl }
+  return { type: "success", ...created }
 }
