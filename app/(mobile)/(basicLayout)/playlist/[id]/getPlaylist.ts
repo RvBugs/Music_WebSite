@@ -23,12 +23,22 @@ export type PlaylistWithSongs = {
   name: string
   description: string | null
   band: string
-  cover: string | null,
-  favorite: boolean,
+  cover: string | null
+  favorite: boolean
   songs: PlaylistSong[]
 }
 
-export default async function getPlaylistFromId(id: string): Promise<RegisterResult> {
+const SONG_COLUMNS = "id, name, timesig, scale, favourite, cover"
+
+function failure(error: { message: string }): RegisterResult {
+  console.error(error)
+
+  return { type: "error", error: error.message }
+}
+
+export default async function getPlaylistFromId(
+  id: string
+): Promise<RegisterResult> {
   const supabase = await createClient()
 
   const { data: playlist, error } = await supabase
@@ -37,29 +47,15 @@ export default async function getPlaylistFromId(id: string): Promise<RegisterRes
     .eq("id", id)
     .single()
 
-  if (error) {
-    console.error(error)
-
-    return {
-      type: "error",
-      error: error.message,
-    }
-  }
+  if (error) return failure(error)
 
   // songs belonging to this playlist (song.playlist = playlist.id)
   const { data: songs, error: songsError } = await supabase
     .from("song")
-    .select("id, name, timesig, scale, favourite, cover")
+    .select(SONG_COLUMNS)
     .eq("playlist", id)
 
-  if (songsError) {
-    console.error(songsError)
-
-    return {
-      type: "error",
-      error: songsError.message,
-    }
-  }
+  if (songsError) return failure(songsError)
 
   return {
     type: "success",
