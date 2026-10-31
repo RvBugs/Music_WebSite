@@ -4,15 +4,53 @@ import { Check, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Song } from "@/app/(mobile)/(basicLayout)/songs/load"
+import { resolveCoverUrl } from "@/app/(mobile)/(basicLayout)/playlist/coverUrl"
 
-function getCover(cover: string | null) {
-  if (!cover) return "/img.png"
+function toggleId(ids: number[], id: number): number[] {
+  return ids.includes(id) ? ids.filter((item) => item !== id) : [...ids, id]
+}
 
-  try {
-    return JSON.parse(cover).data.publicUrl as string
-  } catch {
-    return cover
-  }
+function SongOption({
+  song,
+  checked,
+  onToggle,
+}: {
+  song: Song
+  checked: boolean
+  onToggle: () => void
+}) {
+  return (
+    <button
+      type="button"
+      role="checkbox"
+      aria-checked={checked}
+      onClick={onToggle}
+      className="flex flex-row items-center gap-4 rounded-md p-2 text-left transition-colors hover:bg-muted/50"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={resolveCoverUrl(song.cover)}
+        alt="song"
+        className="aspect-square size-full max-h-15 max-w-15 rounded-md object-cover"
+      />
+      <div className="min-w-0 flex-1">
+        <p className="line-clamp-1 text-base font-medium">{song.name}</p>
+        <p className="line-clamp-1 text-xs text-muted-foreground">
+          Scale - {song.scale} And Time Signature {song.timesig}
+        </p>
+      </div>
+      <span
+        className={cn(
+          "flex size-6 shrink-0 items-center justify-center rounded-md border transition-colors",
+          checked
+            ? "border-primary bg-primary text-primary-foreground"
+            : "border-muted-foreground/40"
+        )}
+      >
+        {checked && <Check className="size-4" />}
+      </span>
+    </button>
+  )
 }
 
 export default function SongPicker({
@@ -27,14 +65,6 @@ export default function SongPicker({
   onDone: () => void
 }) {
   const allSelected = songs.length > 0 && selected.length === songs.length
-
-  function toggle(id: number) {
-    onChange(
-      selected.includes(id)
-        ? selected.filter((item) => item !== id)
-        : [...selected, id]
-    )
-  }
 
   return (
     <div className="flex min-h-full flex-col">
@@ -69,7 +99,6 @@ export default function SongPicker({
         )}
       </div>
 
-
       <div className="flex flex-1 flex-col gap-1 px-4 py-3">
         {songs.length === 0 && (
           <p className="py-16 text-center text-sm text-muted-foreground">
@@ -77,43 +106,14 @@ export default function SongPicker({
           </p>
         )}
 
-        {songs.map((song) => {
-          const checked = selected.includes(song.id)
-
-          return (
-            <button
-              key={song.id}
-              type="button"
-              role="checkbox"
-              aria-checked={checked}
-              onClick={() => toggle(song.id)}
-              className="flex flex-row items-center gap-4 rounded-md p-2 text-left transition-colors hover:bg-muted/50"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={getCover(song.cover)}
-                alt="song"
-                className="aspect-square size-full max-h-15 max-w-15 rounded-md object-cover"
-              />
-              <div className="min-w-0 flex-1">
-                <p className="line-clamp-1 text-base font-medium">{song.name}</p>
-                <p className="line-clamp-1 text-xs text-muted-foreground">
-                  Scale - {song.scale} And Time Signature {song.timesig}
-                </p>
-              </div>
-              <span
-                className={cn(
-                  "flex size-6 shrink-0 items-center justify-center rounded-md border transition-colors",
-                  checked
-                    ? "border-primary bg-primary text-primary-foreground"
-                    : "border-muted-foreground/40"
-                )}
-              >
-                {checked && <Check className="size-4" />}
-              </span>
-            </button>
-          )
-        })}
+        {songs.map((song) => (
+          <SongOption
+            key={song.id}
+            song={song}
+            checked={selected.includes(song.id)}
+            onToggle={() => onChange(toggleId(selected, song.id))}
+          />
+        ))}
       </div>
 
       {/* Done */}
