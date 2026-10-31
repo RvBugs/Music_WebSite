@@ -5,21 +5,11 @@ import { useState } from "react"
 import { ChevronDown, MoreVertical, Rows3 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Playlist } from "@/app/(mobile)/(basicLayout)/playlist/load"
+import { resolveCoverUrl } from "@/app/(mobile)/(basicLayout)/playlist/coverUrl"
 
 type Layout = "grid" | "list"
 
-const DEFAULT_COVER = "/img.png"
 const NO_DESCRIPTION = "No description"
-
-function resolveCoverUrl(cover: string | null): string {
-  if (!cover) return DEFAULT_COVER
-
-  try {
-    return JSON.parse(cover).data.publicUrl as string
-  } catch {
-    return cover
-  }
-}
 
 function PlaylistText({ playlist }: { playlist: Playlist }) {
   return (
