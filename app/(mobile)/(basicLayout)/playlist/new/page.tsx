@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import {
   ListMusic,
   LoaderCircle,
@@ -22,79 +22,56 @@ import {
   FieldSet,
 } from "@/components/ui/field"
 
-import createNewPlaylist from "@/app/(mobile)/(basicLayout)/playlist/new/createNewPlaylist"
+import createNewPlaylist, {
+  type RegisterResult,
+} from "@/app/(mobile)/(basicLayout)/playlist/new/createNewPlaylist"
 import { toast } from "@/components/ui/toast"
-import { load, Song } from "@/app/(mobile)/(basicLayout)/songs/load"
+import useSongs from "@/app/(mobile)/(basicLayout)/playlist/new/useSongs"
+import useCoverImage from "@/app/(mobile)/(basicLayout)/playlist/new/useCoverImage"
 import SongPicker from "@/app/(mobile)/(basicLayout)/playlist/new/songPicker"
-
-const MAX_IMAGE_SIZE = 5 * 1024 * 1024
-const ALLOWED_IMAGE_TYPES = ["image/png", "image/jpeg", "image/webp"]
 
 type PlaylistErrors = {
   name?: string
 }
 
+function buildPlaylistFormData(name: string, cover: File, songIds: number[]) {
+  const formData = new FormData()
+  formData.append("name", name)
+  formData.append("cover", cover)
+  formData.append("songIds", JSON.stringify(songIds))
+
+  return formData
+}
+
+function showCreatedToast(result: RegisterResult, songCount: number) {
+  if (result.type === "songsError") {
+    toast.add({
+      type: "error",
+      title: "Playlist created, but songs were not added",
+      description: result.error,
+    })
+    return
+  }
+
+  toast.add({
+    type: "success",
+    title: "Playlist created successfully",
+    description:
+      songCount > 0
+        ? `${songCount} song(s) added to your playlist.`
+        : "You can now add songs to your playlist.",
+  })
+}
+
 export default function NewPlaylistPage() {
   const router = useRouter()
-  const fileInputRef = useRef<HTMLInputElement>(null)
+  const cover = useCoverImage()
   const [name, setName] = useState("")
-  const [coverImage, setCoverImage] = useState<File | null>(null)
-  const [imagePreview, setImagePreview] = useState<string | null>(null)
-  const [imageError, setImageError] = useState("")
   const [errors, setErrors] = useState<PlaylistErrors>({})
   const [loading, setLoading] = useState(false)
-  const [songs, setSongs] = useState<Song[]>([])
-  const [songsLoading, setSongsLoading] = useState(true)
+  const { songs, loading: songsLoading } = useSongs()
   const [selectedIds, setSelectedIds] = useState<number[]>([])
   const [pickerOpen, setPickerOpen] = useState(false)
-
-  useEffect(() => {
-    let active = true
-
-    load()
-      .then((result) => {
-        if (!active) return
-        if (result.type === "success") setSongs(result.data ?? [])
-        setSongsLoading(false)
-      })
-      .catch(() => {
-        if (active) setSongsLoading(false)
-      })
-
-    return () => {
-      active = false
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!coverImage) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setImagePreview(null)
-      return
-    }
-
-    const previewUrl = URL.createObjectURL(coverImage)
-    setImagePreview(previewUrl)
-
-    return () => URL.revokeObjectURL(previewUrl)
-  }, [coverImage])
-
-  function handleImageChange(file?: File) {
-    if (!file) return
-
-    if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
-      setImageError("Choose a PNG, JPG, or WebP image.")
-      return
-    }
-
-    if (file.size > MAX_IMAGE_SIZE) {
-      setImageError("Image must be 5 MB or smaller.")
-      return
-    }
-
-    setCoverImage(file)
-    setImageError("")
-  }
 
   function validate() {
     const nextErrors: PlaylistErrors = {}
@@ -105,13 +82,13 @@ export default function NewPlaylistPage() {
       nextErrors.name = "Playlist name must be 100 characters or fewer."
     }
 
-    if (!coverImage && !imageError) {
-      setImageError("Playlist cover image is required.")
+    if (!cover.file && !cover.error) {
+      cover.setError("Playlist cover image is required.")
     }
 
     setErrors(nextErrors)
 
-    return Object.keys(nextErrors).length === 0 && !!coverImage && !imageError
+    return Object.keys(nextErrors).length === 0 && !!cover.file && !cover.error
   }
 
   async function handleCreatePlaylist() {
@@ -120,15 +97,14 @@ export default function NewPlaylistPage() {
     setLoading(true)
 
     try {
-      if (coverImage === null) {
-        setImageError("Cover image is required.")
+      const coverFile = cover.file
+
+      if (coverFile === null) {
+        cover.setError("Cover image is required.")
         return
       }
 
-      const formData = new FormData()
-      formData.append("name", name.trim())
-      formData.append("cover", coverImage)
-      formData.append("songIds", JSON.stringify(selectedIds))
+      const formData = buildPlaylistFormData(name.trim(), coverFile, selectedIds)
 
       const result = await createNewPlaylist(formData)
 
@@ -145,22 +121,7 @@ export default function NewPlaylistPage() {
         return
       }
 
-      if (result.type === "songsError") {
-        toast.add({
-          type: "error",
-          title: "Playlist created, but songs were not added",
-          description: result.error,
-        })
-      } else {
-        toast.add({
-          type: "success",
-          title: "Playlist created successfully",
-          description:
-            selectedIds.length > 0
-              ? `${selectedIds.length} song(s) added to your playlist.`
-              : "You can now add songs to your playlist.",
-        })
-      }
+      showCreatedToast(result, selectedIds.length)
 
       router.replace(`/playlist/${result.id}`)
     } catch {
@@ -178,14 +139,9 @@ export default function NewPlaylistPage() {
     if (loading) return
 
     setName("")
-    setCoverImage(null)
     setSelectedIds([])
-    setImageError("")
     setErrors({})
-
-    if (fileInputRef.current) {
-      fileInputRef.current.value = ""
-    }
+    cover.reset()
   }
 
   if (pickerOpen) {
@@ -232,14 +188,14 @@ export default function NewPlaylistPage() {
                 </FieldLabel>
 
                 <input
-                  ref={fileInputRef}
+                  ref={cover.inputRef}
                   id="playlist-cover"
                   type="file"
                   accept="image/png,image/jpeg,image/webp"
                   className="hidden flex-row  "
                   disabled={loading}
                   onChange={(event) => {
-                    handleImageChange(event.target.files?.[0])
+                    cover.select(event.target.files?.[0])
                     event.target.value = ""
                   }}
                 />
@@ -247,15 +203,15 @@ export default function NewPlaylistPage() {
                 <div className="flex flex-col gap-3">
                   <button
                     type="button"
-                    onClick={() => fileInputRef.current?.click()}
+                    onClick={cover.openPicker}
                     disabled={loading}
                     aria-label="Choose playlist cover image"
                     className="group relative flex aspect-square h-35 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl border border-dashed bg-muted/30 transition-colors hover:border-primary hover:bg-muted/50 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {imagePreview ? (
+                    {cover.preview ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={imagePreview}
+                        src={cover.preview}
                         alt="Playlist cover preview"
                         className="size-full object-cover"
                       />
@@ -268,9 +224,9 @@ export default function NewPlaylistPage() {
                   </button>
 
                   <div className="flex min-w-0 flex-1 flex-col items-start gap-2  ">
-                    {imageError ? (
+                    {cover.error ? (
                       <p role="alert" className="text-sm text-destructive">
-                        {imageError}
+                        {cover.error}
                       </p>
                     ) : (
                       <FieldDescription>
@@ -278,10 +234,10 @@ export default function NewPlaylistPage() {
                       </FieldDescription>
                     )}
 
-                    {coverImage && (
+                    {cover.file && (
                       <p className="max-w-full truncate text-xs text-muted-foreground">
-                        {coverImage.name} ·{" "}
-                        {(coverImage.size / (1024 * 1024)).toFixed(2)} MB
+                        {cover.file.name} ·{" "}
+                        {(cover.file.size / (1024 * 1024)).toFixed(2)} MB
                       </p>
                     )}
                   </div>
@@ -322,38 +278,6 @@ export default function NewPlaylistPage() {
                   </FieldDescription>
                 )}
               </Field>
-
-              {/*/!* Description *!/*/}
-              {/*<Field className="gap-2">*/}
-              {/*  <FieldLabel htmlFor="playlist-description">Description</FieldLabel>*/}
-
-              {/*  <div className="relative">*/}
-              {/*    <AlignLeft className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />*/}
-
-              {/*    <Input*/}
-              {/*      aria-label="playlist description"*/}
-              {/*      id="playlist-description"*/}
-              {/*      autoComplete="off"*/}
-              {/*      placeholder="Optional short description"*/}
-              {/*      value={description}*/}
-              {/*      maxLength={200}*/}
-              {/*      onChange={(event) => {*/}
-              {/*        setDescription(event.target.value)*/}
-              {/*        setErrors((previous) => ({*/}
-              {/*          ...previous,*/}
-              {/*          description: undefined,*/}
-              {/*        }))*/}
-              {/*      }}*/}
-              {/*      aria-invalid={!!errors.description}*/}
-              {/*      className="h-11 rounded-xl pl-10"*/}
-              {/*      disabled={loading}*/}
-              {/*    />*/}
-              {/*  </div>*/}
-
-              {/*  {errors.description && (*/}
-              {/*    <p className="text-sm text-destructive">{errors.description}</p>*/}
-              {/*  )}*/}
-              {/*</Field>*/}
 
               {/* Songs */}
               <Field className="gap-2">
